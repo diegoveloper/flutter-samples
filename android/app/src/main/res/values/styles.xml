@@ -4,5 +4,9 @@
         <!-- Show a splash screen on the activity. Automatically removed when
              Flutter draws its first frame -->
         <item name="android:windowBackground">@drawable/launch_background</item>
+
+        <item name="android:windowFullscreen">true</item> 
     </style>
+
+    <color name="red">#FF0000</color>
 </resources>
