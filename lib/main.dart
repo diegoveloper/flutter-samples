@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_samples/fetch_data/main_fetch_data.dart';
 import 'package:flutter_samples/persistent_tabbar/main_persistent_tabbar.dart';
 
 void main() => runApp(MaterialApp(
@@ -35,7 +36,13 @@ class MyAppState extends State<MyApp> {
                   title: "Persistent Tab Bar",
                   actionTap: () {
                     _onButtonTap(MainPersistentTabBar());
-                  })
+                  }),
+              MyMenuButton(
+                title: "Fetch Data JSON",
+                actionTap: (){
+                  _onButtonTap(MainFetchData());
+                },
+              ),
             ],
           ),
         ),
@@ -51,12 +58,15 @@ class MyMenuButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialButton(
-      height: 50.0,
-      color: Theme.of(context).primaryColor,
-      textColor: Colors.white,
-      child: new Text(title),
-      onPressed: actionTap,
+    return Padding(
+      padding: const EdgeInsets.all(15.0),
+      child: MaterialButton(
+        height: 50.0,
+        color: Theme.of(context).primaryColor,
+        textColor: Colors.white,
+        child: new Text(title),
+        onPressed: actionTap,
+      ),
     );
   }
 }
