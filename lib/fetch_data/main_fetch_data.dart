@@ -42,14 +42,10 @@ class _MainFetchDataState extends State<MainFetchData> {
             onPressed: _fetchData,
           ),
       ),
-      body: new LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints) {
-          if (isLoading) {
-            return Center(
+      body: isLoading? Center(
               child: CircularProgressIndicator(),
-            );
-          } else {
-            return ListView.builder(
+            ) :
+             ListView.builder(
               itemCount: list.length,
               itemBuilder: (BuildContext context, int index) {
                  return ListTile(
@@ -61,11 +57,7 @@ class _MainFetchDataState extends State<MainFetchData> {
                       width: 40.0,
                    ),
                  );
-              },
-            );
-          }
-        },
-      ),
+              })
     );
   }
 }
