@@ -13,3 +13,8 @@
 
 **Fetching & Parsing JSON data**
 -  https://medium.com/@diegoveloper/flutter-fetching-parsing-json-data-c019ddddaa34
+
+
+
+**Persistent Tab bars**
+-  https://medium.com/@diegoveloper/flutter-persistent-tab-bars-a26220d322bc
