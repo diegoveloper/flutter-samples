@@ -18,3 +18,7 @@
 
 **Persistent Tab bars**
 -  https://medium.com/@diegoveloper/flutter-persistent-tab-bars-a26220d322bc
+
+
+**Collapsing Toolbar - Sliver App Bar**
+-  https://medium.com/@diegoveloper/flutter-collapsing-toolbar-sliver-app-bar-14b858e87abe
