@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_samples/collapsing_toolbar/main_collapsing_toolbar.dart';
 import 'package:flutter_samples/fetch_data/main_fetch_data.dart';
 import 'package:flutter_samples/persistent_tabbar/main_persistent_tabbar.dart';
 
@@ -18,35 +19,41 @@ class MyApp extends StatefulWidget {
 
 class MyAppState extends State<MyApp> {
   _onButtonTap(Widget page) {
-    Navigator.push(context,
-        MaterialPageRoute(builder: (BuildContext context) => page));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (BuildContext context) => page));
   }
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-        appBar: AppBar(
-          title: Text("Flutter Samples"),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Flutter Samples"),
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(15.0),
+        child: ListView(
+          children: <Widget>[
+            MyMenuButton(
+              title: "Fetch Data JSON",
+              actionTap: () {
+                _onButtonTap(MainFetchData());
+              },
+            ),
+            MyMenuButton(
+                title: "Persistent Tab Bar",
+                actionTap: () {
+                  _onButtonTap(MainPersistentTabBar());
+                }),
+            MyMenuButton(
+              title: "Collapsing Toolbar",
+              actionTap: () {
+                _onButtonTap(MainCollapsingToolbar());
+              },
+            ),
+          ],
         ),
-        body: Padding(
-          padding: EdgeInsets.all(15.0),
-          child: ListView(
-            children: <Widget>[
-              MyMenuButton(
-                  title: "Persistent Tab Bar",
-                  actionTap: () {
-                    _onButtonTap(MainPersistentTabBar());
-                  }),
-              MyMenuButton(
-                title: "Fetch Data JSON",
-                actionTap: (){
-                  _onButtonTap(MainFetchData());
-                },
-              ),
-            ],
-          ),
-        ),
-      );
+      ),
+    );
   }
 }
 
