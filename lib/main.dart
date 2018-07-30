@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_samples/collapsing_toolbar/main_collapsing_toolbar.dart';
 import 'package:flutter_samples/fetch_data/main_fetch_data.dart';
+import 'package:flutter_samples/hero_animations/main_hero_animations.dart';
 import 'package:flutter_samples/persistent_tabbar/main_persistent_tabbar.dart';
 
 void main() => runApp(MaterialApp(
@@ -48,6 +49,12 @@ class MyAppState extends State<MyApp> {
               title: "Collapsing Toolbar",
               actionTap: () {
                 _onButtonTap(MainCollapsingToolbar());
+              },
+            ),
+            MyMenuButton(
+              title: "Hero Animations",
+              actionTap: () {
+                _onButtonTap(MainHeroAnimationsPage());
               },
             ),
           ],
