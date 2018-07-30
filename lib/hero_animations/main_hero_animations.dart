@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_samples/hero_animations/hero_dialog_route.dart';
 import 'package:flutter_samples/hero_animations/page1.dart';
 import 'package:flutter_samples/hero_animations/page2.dart';
-import 'package:flutter_samples/hero_animations/page3.dart';
 
 class MainHeroAnimationsPage extends StatefulWidget {
   @override
@@ -36,7 +35,7 @@ class _MainHeroAnimationsPageState extends State<MainHeroAnimationsPage> {
                   );
                 });
           },
-          transitionDuration: Duration(seconds: 1)),
+          transitionDuration: Duration(milliseconds: 600)),
     );
   }
 
@@ -54,25 +53,42 @@ class _MainHeroAnimationsPageState extends State<MainHeroAnimationsPage> {
               flex: 1,
               fit: FlexFit.tight,
               child: Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    _buildCustomButton("Sample 1", Page1()),
-                    _buildCustomButton("Sample 2", Page2()),
-                    _buildCustomButton("Sample 3", Page3()),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisSize: MainAxisSize.max,
+                      children: <Widget>[
+                        _buildCustomButton("Simple Hero", Page1()),
+                        _buildCustomButton("Two Heroes", Page2()),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        _buildCustomButton(
+                            "Hero on Dialog", _buildPopUp(context),
+                            isPopup: true),
+                        _buildCustomButton("Custom Hero Animation", Page1(),
+                            isCustom: true)
+                      ],
+                    ),
                   ],
                 ),
               ),
             ),
             Flexible(
-              flex: 2,
+              flex: 1,
               fit: FlexFit.tight,
               child: Column(
                 children: <Widget>[
                   Hero(
                     tag: "hero1",
                     child: ClipOval(
-                      child: CustomFlutterLogo(),
+                      child: CustomLogo(
+                        size: 60.0,
+                      ),
                     ),
                   ),
                   Hero(
@@ -81,29 +97,12 @@ class _MainHeroAnimationsPageState extends State<MainHeroAnimationsPage> {
                         color: Colors.transparent,
                         child: Text(
                           "Sample Hero",
-                          style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold),
+                          style: TextStyle(fontSize: 14.0, color: Colors.black),
                         ),
                       ))
                 ],
               ),
             ),
-            Flexible(
-              flex: 1,
-              fit: FlexFit.tight,
-              child: Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    _buildCustomButton("Sample 4", _buildPopUp(context),
-                        isPopup: true),
-                    _buildCustomButton("Sample 5", Page1(), isCustom: true)
-                  ],
-                ),
-              ),
-            )
           ],
         ),
       ),
@@ -115,7 +114,7 @@ class _MainHeroAnimationsPageState extends State<MainHeroAnimationsPage> {
     return Padding(
       padding: EdgeInsets.all(10.0),
       child: MaterialButton(
-        color: Colors.grey,
+        color: Colors.lightBlue,
         onPressed: () {
           if (isPopup) {
             _onButtonTapPopup(page);
@@ -137,13 +136,10 @@ class _MainHeroAnimationsPageState extends State<MainHeroAnimationsPage> {
             tag: "hero2", child: Material(child: Text('You are my hero.'))),
         content: Container(
           child: Hero(
-            tag: 'hero1',
-            child: Container(
-              height: 300.0,
-              width: 300.0,
-              child: FlutterLogo(),
-            ),
-          ),
+              tag: 'hero1',
+              child: CustomLogo(
+                size: 300.0,
+              )),
         ),
         actions: <Widget>[
           OutlineButton(
@@ -156,8 +152,10 @@ class _MainHeroAnimationsPageState extends State<MainHeroAnimationsPage> {
   }
 }
 
-class CustomFlutterLogo extends StatelessWidget {
-  static const size = 200.0;
+class CustomLogo extends StatelessWidget {
+  final double size;
+
+  CustomLogo({this.size = 200.0});
 
   @override
   Widget build(BuildContext context) {
@@ -166,8 +164,10 @@ class CustomFlutterLogo extends StatelessWidget {
       width: size,
       height: size,
       child: Center(
-        child: FlutterLogo(
-          size: size,
+        child: Image.asset(
+          "images/mario_logo.png",
+          width: size,
+          height: size,
         ),
       ),
     );

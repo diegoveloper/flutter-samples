@@ -10,13 +10,13 @@ class Page1 extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             Align(
-              alignment: Alignment.topCenter,
+              alignment: Alignment.center,
               child: Hero(
                 tag: "hero1",
                 child: Container(
-                  height: 50.0,
-                  width: 50.0,
-                  child: CustomFlutterLogo(),
+                  height: 250.0,
+                  width: 250.0,
+                  child: CustomLogo(),
                 ),
               ),
             ),
