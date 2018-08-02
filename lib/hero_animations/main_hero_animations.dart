@@ -46,64 +46,38 @@ class _MainHeroAnimationsPageState extends State<MainHeroAnimationsPage> {
         title: Text("Hero Animations"),
       ),
       body: Container(
-        child: Flex(
-          direction: Axis.vertical,
-          children: <Widget>[
-            Flexible(
-              flex: 1,
-              fit: FlexFit.tight,
-              child: Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      mainAxisSize: MainAxisSize.max,
-                      children: <Widget>[
-                        _buildCustomButton("Simple Hero", Page1()),
-                        _buildCustomButton("Two Heroes", Page2()),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        _buildCustomButton(
-                            "Hero on Dialog", _buildPopUp(context),
-                            isPopup: true),
-                        _buildCustomButton("Custom Hero Animation", Page1(),
-                            isCustom: true)
-                      ],
-                    ),
-                  ],
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              _buildCustomButton("Simple Hero", Page1()),
+              _buildCustomButton("Two Heroes", Page2()),
+              _buildCustomButton("Hero on Dialog", _buildPopUp(context),
+                  isPopup: true),
+              _buildCustomButton("Custom Hero Animation", Page1(),
+                  isCustom: true),
+              Hero(
+                tag: "hero1",
+                child: ClipOval(
+                  child: CustomLogo(
+                    size: 60.0,
+                  ),
                 ),
               ),
-            ),
-            Flexible(
-              flex: 1,
-              fit: FlexFit.tight,
-              child: Column(
-                children: <Widget>[
-                  Hero(
-                    tag: "hero1",
-                    child: ClipOval(
-                      child: CustomLogo(
-                        size: 60.0,
-                      ),
+              Hero(
+                  tag: "hero2",
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      "Sample Hero",
+                      style:
+                          TextStyle(fontSize: 14.0, color: Colors.black),
                     ),
-                  ),
-                  Hero(
-                      tag: "hero2",
-                      child: Material(
-                        color: Colors.transparent,
-                        child: Text(
-                          "Sample Hero",
-                          style: TextStyle(fontSize: 14.0, color: Colors.black),
-                        ),
-                      ))
-                ],
-              ),
-            ),
-          ],
+                  ))
+            ],
+          ),
         ),
       ),
     );
@@ -112,8 +86,10 @@ class _MainHeroAnimationsPageState extends State<MainHeroAnimationsPage> {
   _buildCustomButton(String text, Widget page,
       {bool isPopup = false, bool isCustom = false}) {
     return Padding(
-      padding: EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(8.0),
       child: MaterialButton(
+        height: 40.0,
+        padding: EdgeInsets.all(10.0),
         color: Colors.lightBlue,
         onPressed: () {
           if (isPopup) {
@@ -124,7 +100,11 @@ class _MainHeroAnimationsPageState extends State<MainHeroAnimationsPage> {
             _onButtonTap(page);
           }
         },
-        child: Text(text),
+        child: Text(
+          text,
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 13.0),
+        ),
       ),
     );
   }
