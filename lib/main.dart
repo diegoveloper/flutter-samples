@@ -3,6 +3,7 @@ import 'package:flutter_samples/collapsing_toolbar/main_collapsing_toolbar.dart'
 import 'package:flutter_samples/fetch_data/main_fetch_data.dart';
 import 'package:flutter_samples/hero_animations/main_hero_animations.dart';
 import 'package:flutter_samples/persistent_tabbar/main_persistent_tabbar.dart';
+import 'package:flutter_samples/size_and_position/main_size_and_position.dart';
 
 void main() => runApp(MaterialApp(
       theme: ThemeData(
@@ -55,6 +56,12 @@ class MyAppState extends State<MyApp> {
               title: "Hero Animations",
               actionTap: () {
                 _onButtonTap(MainHeroAnimationsPage());
+              },
+            ),
+            MyMenuButton(
+              title: "Size and Positions",
+              actionTap: () {
+                _onButtonTap(MainSizeAndPosition());
               },
             ),
           ],
