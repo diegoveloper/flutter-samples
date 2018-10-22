@@ -3,6 +3,7 @@ import 'package:flutter_samples/collapsing_toolbar/main_collapsing_toolbar.dart'
 import 'package:flutter_samples/fetch_data/main_fetch_data.dart';
 import 'package:flutter_samples/hero_animations/main_hero_animations.dart';
 import 'package:flutter_samples/persistent_tabbar/main_persistent_tabbar.dart';
+import 'package:flutter_samples/scroll_controller/main_scroll_controller.dart';
 import 'package:flutter_samples/size_and_position/main_size_and_position.dart';
 
 void main() => runApp(MaterialApp(
@@ -20,7 +21,7 @@ class MyApp extends StatefulWidget {
 }
 
 class MyAppState extends State<MyApp> {
-  _onButtonTap(Widget page) {
+  onButtonTap(Widget page) {
     Navigator.push(
         context, MaterialPageRoute(builder: (BuildContext context) => page));
   }
@@ -38,30 +39,36 @@ class MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Fetch Data JSON",
               actionTap: () {
-                _onButtonTap(MainFetchData());
+                onButtonTap(MainFetchData());
               },
             ),
             MyMenuButton(
                 title: "Persistent Tab Bar",
                 actionTap: () {
-                  _onButtonTap(MainPersistentTabBar());
+                  onButtonTap(MainPersistentTabBar());
                 }),
             MyMenuButton(
               title: "Collapsing Toolbar",
               actionTap: () {
-                _onButtonTap(MainCollapsingToolbar());
+                onButtonTap(MainCollapsingToolbar());
               },
             ),
             MyMenuButton(
               title: "Hero Animations",
               actionTap: () {
-                _onButtonTap(MainHeroAnimationsPage());
+                onButtonTap(MainHeroAnimationsPage());
               },
             ),
             MyMenuButton(
               title: "Size and Positions",
               actionTap: () {
-                _onButtonTap(MainSizeAndPosition());
+                onButtonTap(MainSizeAndPosition());
+              },
+            ),
+            MyMenuButton(
+              title: "Scroll Controller",
+              actionTap: () {
+                onButtonTap(MainScrollController());
               },
             ),
           ],
