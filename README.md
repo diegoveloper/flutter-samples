@@ -28,3 +28,8 @@
 
 **Shared Element Transitions — Hero — Heroes**
 -  https://medium.com/@diegoveloper/flutter-shared-element-transitions-hero-heroes-f1a083cb123a
+
+
+
+**Let's know the ScrollController and ScrollNotification**
+-  https://medium.com/@diegoveloper/flutter-lets-know-the-scrollcontroller-and-scrollnotification-652b2685a4ac

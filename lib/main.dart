@@ -66,7 +66,7 @@ class MyAppState extends State<MyApp> {
               },
             ),
             MyMenuButton(
-              title: "Scroll Controller",
+              title: "ScrollController and ScrollNotification",
               actionTap: () {
                 onButtonTap(MainScrollController());
               },
