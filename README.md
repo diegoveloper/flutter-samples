@@ -33,3 +33,7 @@
 
 **Let's know the ScrollController and ScrollNotification**
 -  https://medium.com/@diegoveloper/flutter-lets-know-the-scrollcontroller-and-scrollnotification-652b2685a4ac
+
+
+**App Clone - Android Messages**
+-  https://medium.com/@diegoveloper/flutter-app-clone-android-messages-e4b034a6c893
