@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_samples/animations/main_animations.dart';
 import 'package:flutter_samples/app_clone/android_messages/android_messages_page.dart';
 import 'package:flutter_samples/collapsing_toolbar/main_collapsing_toolbar.dart';
 import 'package:flutter_samples/fetch_data/main_fetch_data.dart';
@@ -76,6 +77,12 @@ class MyAppState extends State<MyApp> {
               title: "App Clone: Android Messages",
               actionTap: () {
                 onButtonTap(AndroidMessagesPage());
+              },
+            ),
+            MyMenuButton(
+              title: "Animations",
+              actionTap: () {
+                onButtonTap(MainAnimations());
               },
             ),
           ],
