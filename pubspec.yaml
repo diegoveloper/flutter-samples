@@ -35,7 +35,7 @@ flutter:
   # https://flutter.io/assets-and-images/#from-packages
 
   assets: 
-    - images/mario_logo.png
+    - images/
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
