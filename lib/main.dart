@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_samples/animations/main_animations.dart';
 import 'package:flutter_samples/app_clone/main_apps_clone.dart';
 import 'package:flutter_samples/collapsing_toolbar/main_collapsing_toolbar.dart';
+import 'package:flutter_samples/communication_widgets/main_communication_widgets.dart';
 import 'package:flutter_samples/fetch_data/main_fetch_data.dart';
 import 'package:flutter_samples/hero_animations/main_hero_animations.dart';
 import 'package:flutter_samples/persistent_tabbar/main_persistent_tabbar.dart';
@@ -83,6 +84,12 @@ class MyAppState extends State<MyApp> {
               title: "Animations",
               actionTap: () {
                 onButtonTap(MainAnimations());
+              },
+            ),
+            MyMenuButton(
+              title: "Communication Widgets",
+              actionTap: () {
+                onButtonTap(MainCommunicationWidgets());
               },
             ),
           ],

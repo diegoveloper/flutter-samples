@@ -41,3 +41,7 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 -  https://medium.com/@diegoveloper/flutter-app-clone-android-messages-e4b034a6c893
 
 **App Clone - Twitter Profile**
+
+
+**Communication between widgets**
+-  https://medium.com/@diegoveloper/flutter-communication-between-widgets-f5590230df1e
