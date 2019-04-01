@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_samples/animations/foldable_animation.dart';
+import 'package:flutter_samples/animations/list_details/list_page.dart';
 import 'package:flutter_samples/main.dart';
 
 class MainAnimations extends StatefulWidget {
@@ -29,6 +30,12 @@ class MainAnimationsState extends State<MainAnimations> {
               title: "Foldable Page",
               actionTap: () {
                 onButtonTap(FoldablePage());
+              },
+            ),
+            MyMenuButton(
+              title: "List - Detail Page",
+              actionTap: () {
+                onButtonTap(ListPage());
               },
             ),
           ],

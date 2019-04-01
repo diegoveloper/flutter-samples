@@ -45,3 +45,6 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 
 **Communication between widgets**
 -  https://medium.com/@diegoveloper/flutter-communication-between-widgets-f5590230df1e
+
+**Animations - List - Details (Dragon Ball)**
+- Animations > List - Detail Page
