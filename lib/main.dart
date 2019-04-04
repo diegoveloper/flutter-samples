@@ -8,6 +8,7 @@ import 'package:flutter_samples/hero_animations/main_hero_animations.dart';
 import 'package:flutter_samples/persistent_tabbar/main_persistent_tabbar.dart';
 import 'package:flutter_samples/scroll_controller/main_scroll_controller.dart';
 import 'package:flutter_samples/size_and_position/main_size_and_position.dart';
+import 'package:flutter_samples/split_image/main_split_image.dart';
 
 void main() => runApp(MaterialApp(
       theme: ThemeData(
@@ -90,6 +91,12 @@ class MyAppState extends State<MyApp> {
               title: "Communication Widgets",
               actionTap: () {
                 onButtonTap(MainCommunicationWidgets());
+              },
+            ),
+            MyMenuButton(
+              title: "Split Image",
+              actionTap: () {
+                onButtonTap(MainSplitImage());
               },
             ),
           ],
