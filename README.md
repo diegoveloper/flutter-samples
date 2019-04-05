@@ -2,13 +2,14 @@
 
 You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegoveloper)
 
-  
-**Hello Flutter**
-- https://medium.com/@diegoveloper/hello-flutter-eb49e9b27916
+ 
+ | [**Hello Flutter**](https://medium.com/@diegoveloper/hello-flutter-eb49e9b27916)      | **Splash screen in Flutter**     | 
+|------------|-------------| 
+|  <img src="https://cdn-images-1.medium.com/max/1600/1*Px0kTaFj9fnY2VJdrWGJgA.gif" width="250"> |  <img src="https://cdn-images-1.medium.com/max/1600/1*GfM4eb_y_rM6BaAgDYBWZA.gif" width="250"> |
 
   
 
-**Splash screen in Flutter**
+
 - https://medium.com/@diegoveloper/flutter-splash-screen-9f4e05542548
 
   
