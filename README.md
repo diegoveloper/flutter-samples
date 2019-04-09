@@ -15,20 +15,19 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 |------------|-------------| 
 |  <img src="https://cdn-images-1.medium.com/max/1600/1*xtROWw7cWRrK5b7tPbw2mg.gif" width="250"> |  <img src="https://cdn-images-1.medium.com/max/1600/1*IeAD2e0hM_QThzry3v1FMw.gif" width="250"> |
 
- | [**ScrollController and ScrollNotification**](https://medium.com/@diegoveloper/flutter-lets-know-the-scrollcontroller-and-scrollnotification-652b2685a4ac)      | [**App Clone - Android Messages**](https://medium.com/@diegoveloper/flutter-app-clone-android-messages-e4b034a6c893)     | 
+ | [**ScrollController and ScrollNotification**](https://medium.com/@diegoveloper/flutter-lets-know-the-scrollcontroller-and-scrollnotification-652b2685a4ac)      | [**App Clone - Android Messages**](https://medium.com/@diegoveloper/flutter-app-clone-android-messages-e4b034a6c893)     | 
 |------------|-------------| 
 |  <img src="https://cdn-images-1.medium.com/max/1600/1*_QUSvcpBYYX8v_SiXWpeRA.gif" width="250"> |  <img src="https://cdn-images-1.medium.com/max/1600/1*Rb2ATV7nL0lO5K2VcF1NVw.gif" width="250"> |
 
- | [**Communication between widgets**](https://medium.com/flutter-community/flutter-communication-between-widgets-f5590230df1e)      
-|------------|
-|  <img src="https://cdn-images-1.medium.com/max/1600/1*kIZJa1_i0OcsqymMxk04zA.gif" width="250"> |
+| [**Communication between widgets**](https://medium.com/flutter-community/flutter-communication-between-widgets-f5590230df1e)   | Foldable Animation : Animations/Foldable Page/ |
+|--|--|
+| <img src="https://cdn-images-1.medium.com/max/1600/1*kIZJa1_i0OcsqymMxk04zA.gif" width="250"> | <center> <img src="https://media.giphy.com/media/e5Xc8eQQCwyF5AoG7U/giphy.gif" width="250"> </center>|
 
+| List Detail: Animations/List-Detail   | Circular List : Animations/Circular List/ |
+|--|--|
+| <center> <img src="https://media.giphy.com/media/YrquS6qE7hXmAD82Bf/giphy.gif" width="250"> </center> | <center> <img src="https://media.giphy.com/media/iNwDIyUWQ9tDo10tJ6/giphy.gif" width="250"> </center>|
 
-### Todos
-
- - Add **App Clone - Twitter Profile**
- - Add **Animations - List - Details (Dragon Ball)**
-    - Animations > List - Detail Page
- - Add **Animations - Circular List (Dragon Ball)**
-    - Animations > Circular List Page
+| Twitter Profile Clone: Apps Clone/Twitter Profile  |  |
+|--|--|
+| <center> <img src="https://media.giphy.com/media/JH0WO8BWjl6rxwcols/giphy.gif" width="250"> </center> | |
 
