@@ -29,4 +29,6 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
  - Add **App Clone - Twitter Profile**
  - Add **Animations - List - Details (Dragon Ball)**
     - Animations > List - Detail Page
+ - Add **Animations - Circular List (Dragon Ball)**
+    - Animations > Circular List Page
 
