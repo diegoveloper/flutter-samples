@@ -3,6 +3,7 @@ import 'package:flutter_samples/main.dart';
 import 'package:flutter_samples/scroll_controller/scroll_limit_reached.dart';
 import 'package:flutter_samples/scroll_controller/scroll_movement.dart';
 import 'package:flutter_samples/scroll_controller/scroll_status.dart';
+import 'package:flutter_samples/scroll_controller/scroll_sync/scroll_sync.dart';
 
 class MainScrollController extends StatelessWidget {
   onButtonTap(Widget page, BuildContext context) {
@@ -36,6 +37,12 @@ class MainScrollController extends StatelessWidget {
               title: "Scroll Status",
               actionTap: () {
                 onButtonTap(ScrollStatus(), context);
+              },
+            ),
+            MyMenuButton(
+              title: "Scroll Sync",
+              actionTap: () {
+                onButtonTap(ScrollSync(), context);
               },
             ),
           ],
