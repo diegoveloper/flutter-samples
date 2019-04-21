@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_samples/animations/circular_list/circular_list_page.dart';
+import 'package:flutter_samples/animations/custom_appbar/my_custom_appbar_page.dart';
 import 'package:flutter_samples/animations/foldable_animation.dart';
 import 'package:flutter_samples/animations/list_details/list_page.dart';
 import 'package:flutter_samples/main.dart';
@@ -43,6 +44,12 @@ class MainAnimationsState extends State<MainAnimations> {
               title: "Circular List Page",
               actionTap: () {
                 onButtonTap(CircularListPage());
+              },
+            ),
+             MyMenuButton(
+              title: "My Custom AppBar Page",
+              actionTap: () {
+                onButtonTap(MyCustomAppBarPage());
               },
             ),
           ],
