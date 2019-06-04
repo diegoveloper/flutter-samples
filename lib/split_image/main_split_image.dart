@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
-
 import 'package:flutter/services.dart';
 
 class MainSplitImage extends StatefulWidget {
@@ -17,11 +16,12 @@ class _MainSplitImageState extends State<MainSplitImage> {
         AssetImage("images/characters/broly.png", bundle: rootBundle);
     final imageKey = await assetImage.obtainKey(ImageConfiguration());
     var load = assetImage.load(imageKey);
-    load.addListener((listener, err) async {
+    ImageStreamListener listener = ImageStreamListener((info, err) async {
       setState(() {
-        _image = listener.image;
+        _image = info.image;
       });
     });
+    load.addListener(listener);
   }
 
   _reset() {
