@@ -119,7 +119,7 @@ class MyAppState extends State<MyApp> {
               },
             ),
             MyMenuButton(
-              title: "AppBar & SliverAppBar",
+              title: "Custom AppBar & SliverAppBar",
               actionTap: () {
                 onButtonTap(
                   MainAppBarSliverAppBar(),
