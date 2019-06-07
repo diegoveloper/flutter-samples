@@ -27,7 +27,7 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 |--|--|
 | <center> <img src="https://media.giphy.com/media/YrquS6qE7hXmAD82Bf/giphy.gif" width="250"> </center> | <center> <img src="https://media.giphy.com/media/iNwDIyUWQ9tDo10tJ6/giphy.gif" width="250"> </center>|
 
-| Twitter Profile Clone: Apps Clone/Twitter Profile  | Custom AppBar & SliverAppBar |
+| Twitter Profile Clone: Apps Clone/Twitter Profile  | [Custom AppBar & SliverAppBar](https://medium.com/@diegoveloper/flutter-increase-the-power-of-your-appbar-sliverappbar-c4f67c4e076f) |
 |--|--|
 | <center> <img src="https://media.giphy.com/media/JH0WO8BWjl6rxwcols/giphy.gif" width="250"> </center> | <center> <img src="https://media.giphy.com/media/jRwXjfQDEnnMLbrVL1/giphy.gif" width="250"> </center>|
 
