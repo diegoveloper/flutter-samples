@@ -16,12 +16,23 @@ class _MainSplitImageState extends State<MainSplitImage> {
         AssetImage("images/characters/broly.png", bundle: rootBundle);
     final imageKey = await assetImage.obtainKey(ImageConfiguration());
     var load = assetImage.load(imageKey);
+    //uncomment this according to your flutter version
+    /*
     ImageStreamListener listener = ImageStreamListener((info, err) async {
       setState(() {
         _image = info.image;
       });
     });
-    load.addListener(listener);
+    load.addListener(listener);*/
+
+    //or
+
+    /*
+    load.addListener((info, error) async {
+ setState(() {
+        _image = info.image;
+      });
+    },);*/
   }
 
   _reset() {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_samples/animations/main_animations.dart';
 import 'package:flutter_samples/app_clone/main_apps_clone.dart';
+import 'package:flutter_samples/appbar_sliverappbar/main_appbar_sliverappbar.dart';
 import 'package:flutter_samples/collapsing_toolbar/main_collapsing_toolbar.dart';
 import 'package:flutter_samples/communication_widgets/main_communication_widgets.dart';
 import 'package:flutter_samples/fetch_data/main_fetch_data.dart';
@@ -43,60 +44,86 @@ class MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Fetch Data JSON",
               actionTap: () {
-                onButtonTap(MainFetchData());
+                onButtonTap(
+                  MainFetchData(),
+                );
               },
             ),
             MyMenuButton(
                 title: "Persistent Tab Bar",
                 actionTap: () {
-                  onButtonTap(MainPersistentTabBar());
+                  onButtonTap(
+                    MainPersistentTabBar(),
+                  );
                 }),
             MyMenuButton(
               title: "Collapsing Toolbar",
               actionTap: () {
-                onButtonTap(MainCollapsingToolbar());
+                onButtonTap(
+                  MainCollapsingToolbar(),
+                );
               },
             ),
             MyMenuButton(
               title: "Hero Animations",
               actionTap: () {
-                onButtonTap(MainHeroAnimationsPage());
+                onButtonTap(
+                  MainHeroAnimationsPage(),
+                );
               },
             ),
             MyMenuButton(
               title: "Size and Positions",
               actionTap: () {
-                onButtonTap(MainSizeAndPosition());
+                onButtonTap(
+                  MainSizeAndPosition(),
+                );
               },
             ),
             MyMenuButton(
               title: "ScrollController and ScrollNotification",
               actionTap: () {
-                onButtonTap(MainScrollController());
+                onButtonTap(
+                  MainScrollController(),
+                );
               },
             ),
             MyMenuButton(
               title: "Apps Clone",
               actionTap: () {
-                onButtonTap(MainAppsClone());
+                onButtonTap(
+                  MainAppsClone(),
+                );
               },
             ),
             MyMenuButton(
               title: "Animations",
               actionTap: () {
-                onButtonTap(MainAnimations());
+                onButtonTap(
+                  MainAnimations(),
+                );
               },
             ),
             MyMenuButton(
               title: "Communication Widgets",
               actionTap: () {
-                onButtonTap(MainCommunicationWidgets());
+                onButtonTap(
+                  MainCommunicationWidgets(),
+                );
               },
             ),
             MyMenuButton(
               title: "Split Image",
               actionTap: () {
                 onButtonTap(MainSplitImage());
+              },
+            ),
+            MyMenuButton(
+              title: "AppBar & SliverAppBar",
+              actionTap: () {
+                onButtonTap(
+                  MainAppBarSliverAppBar(),
+                );
               },
             ),
           ],
