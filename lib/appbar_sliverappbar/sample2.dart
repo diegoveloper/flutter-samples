@@ -11,18 +11,6 @@ class Sample2 extends StatelessWidget {
               delegate: MySliverAppBar(expandedHeight: 200),
               pinned: true,
             ),
-            /*
-            SliverAppBar(
-              expandedHeight: 200,
-              pinned: true,
-              flexibleSpace: FlexibleSpaceBar(
-                title: Text("SliverAppBar"),
-                background: Image.network(
-                  "https://images.pexels.com/photos/396547/pexels-photo-396547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),*/
             SliverList(
               delegate: SliverChildBuilderDelegate(
                 (_, index) => ListTile(
