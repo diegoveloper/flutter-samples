@@ -22,41 +22,49 @@ class _TwitterProfilePageState extends State<TwitterProfilePage> {
         body: NotificationListener<ScrollUpdateNotification>(
           onNotification: (scrollNotification) {
             final pixels = scrollNotification.metrics.pixels;
-            if (expandedHeader - pixels <= kToolbarHeight) {
-              if (isExpanded) {
-                translate = 0.0;
-                setState(() {
-                  isExpanded = false;
-                });
-              }
-            } else {
-              translate = -avatarMaximumRadius + pixels;
-              if (translate > 0) {
-                translate = 0.0;
-              }
-              if (!isExpanded) {
-                setState(() {
-                  isExpanded = true;
-                });
-              }
-            }
 
-            offset = pixels * 0.4;
+            // check if scroll is vertical ( left to right OR right to left)
+            final scrollTabs = 
+              (scrollNotification.metrics.axisDirection == AxisDirection.right || 
+              scrollNotification.metrics.axisDirection == AxisDirection.left);
 
-            final newSize = (avatarMaximumRadius - offset);
-
-            setState(() {
-              if (newSize < avatarMinimumRadius) {
-                avatarRadius = avatarMinimumRadius;
-              } else if (newSize > avatarMaximumRadius) {
-                avatarRadius = avatarMaximumRadius;
+            if(!scrollTabs){ // and here prevents animation of avatar when you scroll tabs
+              if (expandedHeader - pixels <= kToolbarHeight) {
+                if (isExpanded) {
+                  translate = 0.0;
+                  setState(() {
+                    isExpanded = false;
+                  });
+                }
               } else {
-                avatarRadius = newSize;
+                translate = -avatarMaximumRadius + pixels;
+                if (translate > 0) {
+                  translate = 0.0;
+                }
+                if (!isExpanded) {
+                  setState(() {
+                    isExpanded = true;
+                  });
+                }
               }
-            });
+
+              offset = pixels * 0.4;
+
+              final newSize = (avatarMaximumRadius - offset);
+
+              setState(() {
+                if (newSize < avatarMinimumRadius) {
+                  avatarRadius = avatarMinimumRadius;
+                } else if (newSize > avatarMaximumRadius) {
+                  avatarRadius = avatarMaximumRadius;
+                } else {
+                  avatarRadius = newSize;
+                }
+              });
+            }
           },
           child: DefaultTabController(
-            length: 4,
+            length: 8,
             child: CustomScrollView(
               physics: ClampingScrollPhysics(),
               slivers: <Widget>[
@@ -169,6 +177,18 @@ class TwitterTabs extends SliverPersistentHeaderDelegate {
       child: TabBar(
         isScrollable: true,
         tabs: <Widget>[
+          Tab(
+            text: "Tweets",
+          ),
+          Tab(
+            text: "Tweets & replies",
+          ),
+          Tab(
+            text: "Media",
+          ),
+          Tab(
+            text: "Likes",
+          ),
           Tab(
             text: "Tweets",
           ),
