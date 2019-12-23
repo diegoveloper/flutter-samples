@@ -5,6 +5,8 @@ import 'package:flutter_samples/animations/foldable_animation.dart';
 import 'package:flutter_samples/animations/list_details/list_page.dart';
 import 'package:flutter_samples/main.dart';
 
+import 'custom_sliverheader/custom_sliver_header.dart';
+
 class MainAnimations extends StatefulWidget {
   @override
   MainAnimationsState createState() {
@@ -46,10 +48,16 @@ class MainAnimationsState extends State<MainAnimations> {
                 onButtonTap(CircularListPage());
               },
             ),
-             MyMenuButton(
+            MyMenuButton(
               title: "My Custom AppBar Page",
               actionTap: () {
                 onButtonTap(MyCustomAppBarPage());
+              },
+            ),
+            MyMenuButton(
+              title: "My Custom Sliver Header",
+              actionTap: () {
+                onButtonTap(CustomSliverHeader());
               },
             ),
           ],

@@ -1,6 +1,7 @@
+import 'dart:typed_data';
+import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
-import 'package:flutter/services.dart';
 
 class MainSplitImage extends StatefulWidget {
   @override
@@ -15,24 +16,19 @@ class _MainSplitImageState extends State<MainSplitImage> {
     final assetImage =
         AssetImage("images/characters/broly.png", bundle: rootBundle);
     final imageKey = await assetImage.obtainKey(ImageConfiguration());
-    var load = assetImage.load(imageKey);
-    //uncomment this according to your flutter version
-    /*
+    final DecoderCallback decodeResize =
+        (Uint8List bytes, {int cacheWidth, int cacheHeight}) {
+      return ui.instantiateImageCodec(bytes,
+          targetHeight: cacheHeight, targetWidth: cacheWidth);
+    };
+    var load = assetImage.load(imageKey, decodeResize);
+
     ImageStreamListener listener = ImageStreamListener((info, err) async {
       setState(() {
         _image = info.image;
       });
     });
-    load.addListener(listener);*/
-
-    //or
-
-    /*
-    load.addListener((info, error) async {
- setState(() {
-        _image = info.image;
-      });
-    },);*/
+    load.addListener(listener);
   }
 
   _reset() {
