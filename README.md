@@ -31,7 +31,7 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 |--|--|
 | <center> <img src="https://media.giphy.com/media/JH0WO8BWjl6rxwcols/giphy.gif" width="250"> </center> | <center> <img src="https://media.giphy.com/media/jRwXjfQDEnnMLbrVL1/giphy.gif" width="250"> </center>|
 
-| Split Widgets: Split Widget/Main Split Widget  | Customer Sliver Header |
+| Split Widgets: Split Widget/Main Split Widget  | Custom Sliver Header |
 |--|--|
 | <center> <img src="https://media.giphy.com/media/fWqRy75Zg5lEtP5qkc/giphy.gif" width="250"> </center> | <center> <img src="https://media.giphy.com/media/JOXClC3XFwHosWAVqX/giphy.gif" width="250"> </center>|
 
