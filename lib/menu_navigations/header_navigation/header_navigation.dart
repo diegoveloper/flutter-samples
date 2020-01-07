@@ -19,11 +19,13 @@ class HeaderNavigation extends StatefulWidget {
   final List<HeaderNavigationItem> items;
   final Duration duration;
 
-  const HeaderNavigation(
-      {Key key,
-      @required this.items,
-      this.duration = const Duration(milliseconds: 400)})
-      : super(key: key);
+  const HeaderNavigation({
+    Key key,
+    @required this.items,
+    this.duration = const Duration(
+      milliseconds: 400,
+    ),
+  }) : super(key: key);
 
   @override
   _HeaderNavigationState createState() => _HeaderNavigationState();
@@ -38,6 +40,7 @@ class _HeaderNavigationState extends State<HeaderNavigation> {
   void _onItemTapped(int index) {
     if (!_open) {
       setState(() {
+        _currentIndex = index;
         _open = true;
       });
       return;
@@ -103,13 +106,18 @@ class _HeaderNavigationState extends State<HeaderNavigation> {
                   if (_open)
                     Expanded(
                       flex: 2,
-                      child: ShaderMask(
-                        shaderCallback: (bounds) => LinearGradient(
-                          colors: [item.colorForeground, item.colorForeground],
-                          tileMode: TileMode.mirror,
-                        ).createShader(bounds),
-                        blendMode: BlendMode.srcIn,
-                        child: item.icon,
+                      child: ClipRect(
+                        child: ShaderMask(
+                          shaderCallback: (bounds) => LinearGradient(
+                            colors: [
+                              item.colorForeground,
+                              item.colorForeground
+                            ],
+                            tileMode: TileMode.mirror,
+                          ).createShader(bounds),
+                          blendMode: BlendMode.srcIn,
+                          child: item.icon,
+                        ),
                       ),
                     ),
                   Expanded(
