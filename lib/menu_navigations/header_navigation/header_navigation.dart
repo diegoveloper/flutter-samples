@@ -99,34 +99,51 @@ class _HeaderNavigationState extends State<HeaderNavigation> {
             },
             child: Container(
               alignment: Alignment.center,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
+              child: Stack(
                 children: [
-                  if (_open)
-                    Expanded(
-                      flex: 2,
+                  Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      if (_open)
+                        Expanded(
+                          flex: 2,
+                          child: ClipRect(
+                            child: ShaderMask(
+                              shaderCallback: (bounds) => LinearGradient(
+                                colors: [
+                                  item.colorForeground,
+                                  item.colorForeground
+                                ],
+                                tileMode: TileMode.mirror,
+                              ).createShader(bounds),
+                              blendMode: BlendMode.srcIn,
+                              child: item.icon,
+                            ),
+                          ),
+                        ),
+                      Expanded(
+                        child: _open
+                            ? text
+                            : Center(
+                                child: text,
+                              ),
+                      ),
+                    ],
+                  ),
+                  if (!_open)
+                    Positioned(
+                      left: 0,
+                      right: 0,
+                      bottom: 5,
                       child: ClipRect(
-                        child: ShaderMask(
-                          shaderCallback: (bounds) => LinearGradient(
-                            colors: [
-                              item.colorForeground,
-                              item.colorForeground
-                            ],
-                            tileMode: TileMode.mirror,
-                          ).createShader(bounds),
-                          blendMode: BlendMode.srcIn,
-                          child: item.icon,
+                        child: Icon(
+                          Icons.keyboard_arrow_down,
+                          color: item.colorForeground,
+                          size: 10,
                         ),
                       ),
                     ),
-                  Expanded(
-                    child: _open
-                        ? text
-                        : Center(
-                            child: text,
-                          ),
-                  ),
                 ],
               ),
               decoration: BoxDecoration(
