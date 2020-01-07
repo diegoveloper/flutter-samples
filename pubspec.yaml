@@ -1,5 +1,6 @@
 name: flutter_samples
 description: A new Flutter project.
+version: 1.0.0
 environment:
   sdk: ">=2.6.0 <3.0.0"
 dependencies:

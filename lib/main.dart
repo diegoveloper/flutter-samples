@@ -6,11 +6,11 @@ import 'package:flutter_samples/collapsing_toolbar/main_collapsing_toolbar.dart'
 import 'package:flutter_samples/communication_widgets/main_communication_widgets.dart';
 import 'package:flutter_samples/fetch_data/main_fetch_data.dart';
 import 'package:flutter_samples/hero_animations/main_hero_animations.dart';
+import 'package:flutter_samples/menu_navigations/main_menu_navigations.dart';
 import 'package:flutter_samples/persistent_tabbar/main_persistent_tabbar.dart';
 import 'package:flutter_samples/scroll_controller/main_scroll_controller.dart';
 import 'package:flutter_samples/size_and_position/main_size_and_position.dart';
 import 'package:flutter_samples/split_image/main_split_image.dart';
-import 'package:flutter_samples/split_widget/main_split_widget.dart';
 
 void main() => runApp(MaterialApp(
       theme: ThemeData(
@@ -126,9 +126,9 @@ class MyAppState extends State<MyApp> {
               },
             ),
             MyMenuButton(
-              title: "Split Widget",
+              title: "Menu Navigations",
               actionTap: () {
-                onButtonTap(MainSplitWidget());
+                onButtonTap(MainMenuNavigations());
               },
             ),
           ],

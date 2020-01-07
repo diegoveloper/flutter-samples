@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_samples/animations/circular_list/circular_list_page.dart';
 import 'package:flutter_samples/animations/custom_appbar/my_custom_appbar_page.dart';
-import 'package:flutter_samples/animations/foldable_animation.dart';
+import 'package:flutter_samples/animations/foldable/foldable_animation.dart';
 import 'package:flutter_samples/animations/list_details/list_page.dart';
+import 'package:flutter_samples/animations/split_widget/main_split_widget.dart';
 import 'package:flutter_samples/main.dart';
 
 import 'custom_sliverheader/custom_sliver_header.dart';
@@ -10,7 +11,7 @@ import 'custom_sliverheader/custom_sliver_header.dart';
 class MainAnimations extends StatefulWidget {
   @override
   MainAnimationsState createState() {
-    return new MainAnimationsState();
+    return MainAnimationsState();
   }
 }
 
@@ -58,6 +59,12 @@ class MainAnimationsState extends State<MainAnimations> {
               title: "My Custom Sliver Header",
               actionTap: () {
                 onButtonTap(CustomSliverHeader());
+              },
+            ),
+            MyMenuButton(
+              title: "Split Widget",
+              actionTap: () {
+                onButtonTap(MainSplitWidget());
               },
             ),
           ],
