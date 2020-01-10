@@ -4,6 +4,7 @@ import 'package:flutter_samples/animations/custom_appbar/my_custom_appbar_page.d
 import 'package:flutter_samples/animations/foldable/foldable_animation.dart';
 import 'package:flutter_samples/animations/list_details/list_page.dart';
 import 'package:flutter_samples/animations/split_widget/main_split_widget.dart';
+import 'package:flutter_samples/animations/turn_on_the_light/turn_on_the_light.dart';
 import 'package:flutter_samples/main.dart';
 
 import 'custom_sliverheader/custom_sliver_header.dart';
@@ -65,6 +66,12 @@ class MainAnimationsState extends State<MainAnimations> {
               title: "Split Widget",
               actionTap: () {
                 onButtonTap(MainSplitWidget());
+              },
+            ),
+            MyMenuButton(
+              title: "Turn on the light",
+              actionTap: () {
+                onButtonTap(TurnOnTheLight());
               },
             ),
           ],

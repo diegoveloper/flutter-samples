@@ -35,6 +35,6 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 |--|--|
 | <center> <img src="https://media.giphy.com/media/fWqRy75Zg5lEtP5qkc/giphy.gif" width="250"> </center> | <center> <img src="https://media.giphy.com/media/JOXClC3XFwHosWAVqX/giphy.gif" width="250"> </center>|
 
-| Menu Navigations: Header Navigation  | |
+| Menu Navigations / Header Navigation  | Animations / Turn on the light|
 |--|--|
-| <center> <img src="https://media.giphy.com/media/f5SP7mJnO4x9mK4CSv/giphy.gif" width="250"> </center> | <center>  </center>|
+| <center> <img src="https://media.giphy.com/media/f5SP7mJnO4x9mK4CSv/giphy.gif" width="250"> </center> | <center> <img src="https://media.giphy.com/media/VgSfLeabru2qTerOrp/giphy.gif" width="250">  </center>|
