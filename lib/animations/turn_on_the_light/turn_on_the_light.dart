@@ -78,11 +78,10 @@ class LightClipper extends CustomClipper<Path> {
 
   @override
   Path getClip(Size size) {
-    final circlePath = Path();
-    circlePath.addRRect(RRect.fromRectXY(
-        Rect.fromCircle(center: Offset(x, y), radius: radius), radius, radius));
-    final fullPath = Path();
-    fullPath.addRect(Rect.fromLTWH(0, 0, size.width, size.height));
+    final circlePath = Path()
+      ..addOval(Rect.fromCircle(center: Offset(x, y), radius: radius));
+    final fullPath = Path()
+      ..addRect(Rect.fromLTWH(0, 0, size.width, size.height));
     return Path.combine(PathOperation.reverseDifference, circlePath, fullPath);
   }
 
