@@ -19,7 +19,7 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 |------------|-------------| 
 |  <img src="https://cdn-images-1.medium.com/max/1600/1*_QUSvcpBYYX8v_SiXWpeRA.gif" width="250"> |  <img src="https://cdn-images-1.medium.com/max/1600/1*Rb2ATV7nL0lO5K2VcF1NVw.gif" width="250"> |
 
-| [**Communication between widgets**](https://medium.com/flutter-community/flutter-communication-between-widgets-f5590230df1e)   | Foldable Animation : Animations/Foldable Page/ |
+| [**Communication between widgets**](https://medium.com/flutter-community/flutter-communication-between-widgets-f5590230df1e)   | Animations  / Foldable Page |
 |--|--|
 | <img src="https://cdn-images-1.medium.com/max/1600/1*kIZJa1_i0OcsqymMxk04zA.gif" width="250"> | <center> <img src="https://media.giphy.com/media/e5Xc8eQQCwyF5AoG7U/giphy.gif" width="250"> </center>|
 
