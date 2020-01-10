@@ -23,15 +23,15 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 |--|--|
 | <img src="https://cdn-images-1.medium.com/max/1600/1*kIZJa1_i0OcsqymMxk04zA.gif" width="250"> | <center> <img src="https://media.giphy.com/media/e5Xc8eQQCwyF5AoG7U/giphy.gif" width="250"> </center>|
 
-| List Detail: Animations/List-Detail   | Circular List : Animations/Circular List/ |
+|Animations / List-Detail   | Animations / Circular List/ |
 |--|--|
 | <center> <img src="https://media.giphy.com/media/YrquS6qE7hXmAD82Bf/giphy.gif" width="250"> </center> | <center> <img src="https://media.giphy.com/media/iNwDIyUWQ9tDo10tJ6/giphy.gif" width="250"> </center>|
 
-| Twitter Profile Clone: Apps Clone/Twitter Profile  | [Custom AppBar & SliverAppBar](https://medium.com/@diegoveloper/flutter-increase-the-power-of-your-appbar-sliverappbar-c4f67c4e076f) |
+|Apps Clone / Twitter Profile Clone | [Custom AppBar & SliverAppBar](https://medium.com/@diegoveloper/flutter-increase-the-power-of-your-appbar-sliverappbar-c4f67c4e076f) |
 |--|--|
 | <center> <img src="https://media.giphy.com/media/JH0WO8BWjl6rxwcols/giphy.gif" width="250"> </center> | <center> <img src="https://media.giphy.com/media/jRwXjfQDEnnMLbrVL1/giphy.gif" width="250"> </center>|
 
-| Animations /Split Widgets/Main Split Widget  | Animations/ Custom Sliver Header |
+| Animations / Split Widgets  | Animations / Custom Sliver Header |
 |--|--|
 | <center> <img src="https://media.giphy.com/media/fWqRy75Zg5lEtP5qkc/giphy.gif" width="250"> </center> | <center> <img src="https://media.giphy.com/media/JOXClC3XFwHosWAVqX/giphy.gif" width="250"> </center>|
 
