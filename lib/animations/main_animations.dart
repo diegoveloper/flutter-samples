@@ -8,6 +8,7 @@ import 'package:flutter_samples/animations/turn_on_the_light/turn_on_the_light.d
 import 'package:flutter_samples/main.dart';
 
 import 'custom_sliverheader/custom_sliver_header.dart';
+import 'hide_my_widgets/main_hide_my_widgets.dart';
 
 class MainAnimations extends StatefulWidget {
   @override
@@ -72,6 +73,12 @@ class MainAnimationsState extends State<MainAnimations> {
               title: "Turn on the light",
               actionTap: () {
                 onButtonTap(TurnOnTheLight());
+              },
+            ),
+            MyMenuButton(
+              title: "Hide my widgets",
+              actionTap: () {
+                onButtonTap(MainHideMyWidgets());
               },
             ),
           ],
