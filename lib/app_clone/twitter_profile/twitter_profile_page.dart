@@ -24,11 +24,12 @@ class _TwitterProfilePageState extends State<TwitterProfilePage> {
             final pixels = scrollNotification.metrics.pixels;
 
             // check if scroll is vertical ( left to right OR right to left)
-            final scrollTabs = 
-              (scrollNotification.metrics.axisDirection == AxisDirection.right || 
-              scrollNotification.metrics.axisDirection == AxisDirection.left);
+            final scrollTabs = (scrollNotification.metrics.axisDirection ==
+                    AxisDirection.right ||
+                scrollNotification.metrics.axisDirection == AxisDirection.left);
 
-            if(!scrollTabs){ // and here prevents animation of avatar when you scroll tabs
+            if (!scrollTabs) {
+              // and here prevents animation of avatar when you scroll tabs
               if (expandedHeader - pixels <= kToolbarHeight) {
                 if (isExpanded) {
                   translate = 0.0;
@@ -62,6 +63,7 @@ class _TwitterProfilePageState extends State<TwitterProfilePage> {
                 }
               });
             }
+            return false;
           },
           child: DefaultTabController(
             length: 8,

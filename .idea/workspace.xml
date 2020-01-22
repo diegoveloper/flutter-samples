@@ -1,36 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3be4fa9d-a464-4d6d-afda-afa90499a664" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/example/fluttersamples/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_samples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_samples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_samples_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_samples_android.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app_clone/android_messages/android_messages_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app_clone/android_messages/android_messages_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app_clone/twitter_profile/twitter_profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app_clone/twitter_profile/twitter_profile_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/communication_widgets/parent_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/communication_widgets/parent_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/scroll_controller/scroll_status.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scroll_controller/scroll_status.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.dart_tool/" />
+    <ignored path="$PROJECT_DIR$/.idea/" />
+    <ignored path="$PROJECT_DIR$/.pub/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/main.dart">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/android/app/src/main/kotlin/com/example/flutter_samples/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="ToolWindowManager">
-    <editor active="true" />
-    <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-    </layout>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="679" />
+    <option name="y" value="23" />
+    <option name="width" value="1237" />
+    <option name="height" value="1177" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
-        <option name="show-excluded-files" value="false" />
+        <subPane>
+          <expand>
+            <path>
+              <item name="flutter-samples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter-samples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter-samples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter-samples" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter-samples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter-samples" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter-samples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter-samples" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter-samples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter-samples" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter-samples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter-samples" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter-samples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter-samples" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter-samples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter-samples" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter-samples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter-samples" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter-samples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter-samples" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter-samples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter-samples" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter-samples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter-samples" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="flutter_samples" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="dart.analysis.tool.window.force.activate" value="true" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3be4fa9d-a464-4d6d-afda-afa90499a664" name="Default Changelist" comment="" />
+      <created>1579668569368</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579668569368</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="679" y="23" width="1237" height="1177" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Build Variants" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Captures" side_tool="true" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Capture Tool" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37740585" />
+      <window_info anchor="bottom" id="Run" />
+      <window_info anchor="bottom" id="Logcat" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Debug" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
+      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="AwesomeKotlin" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Flutter Inspector" />
+      <window_info anchor="right" id="Flutter Outline" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Flutter Performance" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/app/src/main/kotlin/com/example/flutter_samples/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
