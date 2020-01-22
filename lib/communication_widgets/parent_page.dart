@@ -24,7 +24,7 @@ class ParentProvider extends InheritedWidget {
   }
 
   static ParentProvider of(BuildContext context) =>
-      context.inheritFromWidgetOfExactType(ParentProvider);
+      context.dependOnInheritedWidgetOfExactType<ParentProvider>();
 }
 
 class ParentPageState extends State<ParentPage>

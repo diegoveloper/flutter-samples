@@ -51,6 +51,7 @@ class _ScrollStatusState extends State<ScrollStatus> {
                 } else if (scrollNotification is ScrollEndNotification) {
                   _onEndScroll(scrollNotification.metrics);
                 }
+                return false;
               },
               child: ListView.builder(
                 itemCount: 30,
