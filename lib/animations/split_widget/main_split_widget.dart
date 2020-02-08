@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_samples/animations/split_widget/split_diagonal_widget.dart';
 
 import 'split_half_widget.dart';
 
@@ -26,7 +27,7 @@ class MainSplitWidget extends StatelessWidget {
           Expanded(
             child: Container(
               color: Colors.grey[500],
-              child: SplitHalfWidget(
+              child: SplitDiagonalWidget(
                 child: Image.asset(
                   "images/dash_dart.png",
                   fit: BoxFit.fitWidth,
