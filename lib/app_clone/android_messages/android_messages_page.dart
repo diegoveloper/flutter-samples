@@ -38,6 +38,7 @@ class _AndroidMessagesPageState extends State<AndroidMessagesPage> {
                     if (isGoingDown) setState(() => isGoingDown = false);
                   }
                 }
+                return false;
               },
               child: _buildList()),
           floatingActionButton: MyFabButton(isGoingDown)),
