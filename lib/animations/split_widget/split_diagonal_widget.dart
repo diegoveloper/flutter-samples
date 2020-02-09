@@ -95,10 +95,10 @@ class SplitClipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     Path path = Path();
     path.moveTo(0.0, size.height * 0.75);
-
     path.lineTo(size.width, size.height * 0.25);
     if (!top) {
       path.lineTo(size.width, size.height);
+      path.lineTo(0.0, size.height);
     } else {
       path.lineTo(size.width, 0.0);
       path.lineTo(0.0, 0.0);
