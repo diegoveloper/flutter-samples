@@ -42,4 +42,4 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 | Animations / Hide my widgets  | Animations / Menu Exploration |
 |--|--|
 | <center> <img src="https://media.giphy.com/media/h4x6fHw65l3KdnDrTi/giphy.gif" width="250"> </center> | <center> <img src="https://media.giphy.com/media/Y07CGmYvcNyl9rkgbY/giphy.gif" width="250">
- </center>|
+ </center>
