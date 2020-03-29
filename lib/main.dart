@@ -13,6 +13,7 @@ import 'package:flutter_samples/size_and_position/main_size_and_position.dart';
 import 'package:flutter_samples/split_image/main_split_image.dart';
 
 void main() => runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -22,7 +23,7 @@ void main() => runApp(MaterialApp(
 class MyApp extends StatefulWidget {
   @override
   MyAppState createState() {
-    return new MyAppState();
+    return MyAppState();
   }
 }
 
