@@ -49,8 +49,8 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 | <center> <img src="https://media.giphy.com/media/XybRawN2vj4YV3fhul/giphy.gif" width="250"> </center> | <center> <img src="https://media.giphy.com/media/UuNiEk20TKjn4F4H7a/giphy.gif" width="250">
  </center>
 
-  | App Clone / Sports Store  |  |
+  | App Clone / Sports Store  | App Clone / Shoes Store  |
 |--|--|
-| <center> <img src="https://media.giphy.com/media/RJn8BMmOzfaW101iS2/giphy.gif" width="250"> </center> | <center> 
+| <center> <img src="https://media.giphy.com/media/RJn8BMmOzfaW101iS2/giphy.gif" width="250"> </center> | <center> <img src="https://media.giphy.com/media/MeP49gjvFbUDShkzJM/giphy.gif" width="250">
  </center>
 
