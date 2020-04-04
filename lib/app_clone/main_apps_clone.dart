@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_samples/app_clone/album_flow/album_flow_page.dart';
 import 'package:flutter_samples/app_clone/android_messages/android_messages_page.dart';
 import 'package:flutter_samples/app_clone/photo_concept/photo_concept_page.dart';
 import 'package:flutter_samples/app_clone/shoes_store/shoes_store_page.dart';
@@ -57,6 +58,12 @@ class MainAppCloneState extends State<MainAppsClone> {
               title: "Shoes Store",
               actionTap: () {
                 onButtonTap(ShoesStorePage());
+              },
+            ),
+            MyMenuButton(
+              title: "Album Flow",
+              actionTap: () {
+                onButtonTap(AlbumFlowPage());
               },
             ),
           ],

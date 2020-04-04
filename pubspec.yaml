@@ -12,6 +12,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   http: any
   circle_wheel_scroll: ^0.0.1+1
+  cached_network_image: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -42,6 +43,7 @@ flutter:
     - images/characters/
     - images/balls/
     - images/shoes/
+    - assets/
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a

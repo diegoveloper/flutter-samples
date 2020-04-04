@@ -54,3 +54,8 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 | <center> <img src="https://media.giphy.com/media/RJn8BMmOzfaW101iS2/giphy.gif" width="250"> </center> | <center> <img src="https://media.giphy.com/media/MeP49gjvFbUDShkzJM/giphy.gif" width="250">
  </center>
 
+   | App Clone / Album Flow  |   |
+|--|--|
+| <center> <img src="https://media.giphy.com/media/eM1wO46QRvVCH5v5qX/giphy.gif" width="250"> </center> | <center> 
+ </center>
+
