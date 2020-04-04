@@ -56,6 +56,6 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 
    | App Clone / Album Flow  |   |
 |--|--|
-| <center> <img src="https://gph.is/g/4bB9kVR" width="250"> </center> | <center> <center> 
+| <center> <img src="https://media.giphy.com/media/eM1wO46QRvVCH5v5qX/giphy.gif"> </center> | <center> <center> 
  </center>
 
