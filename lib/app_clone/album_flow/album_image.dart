@@ -1,7 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:vector_math/vector_math.dart' as vector;
 
 class AlbumImage extends StatelessWidget {
@@ -16,7 +15,6 @@ class AlbumImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    timeDilation = 1.0;
     return Hero(
       tag: image,
       flightShuttleBuilder: (

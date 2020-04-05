@@ -23,7 +23,6 @@ class _AlbumFlowPageState extends State<AlbumFlowPage> {
   final _pageController = PageController();
   final _pageNotifier = ValueNotifier<double>(0.0);
   double _lastOffset = 0.0;
-  double _maxScroll = 0.0;
   int numberOfElements = 30;
 
   void _scrollListener() {
@@ -34,7 +33,6 @@ class _AlbumFlowPageState extends State<AlbumFlowPage> {
     } else {
       isGoingDown = true;
     }
-    _maxScroll = _pageController.position.maxScrollExtent;
     _lastOffset = _pageNotifier.value;
   }
 
@@ -92,6 +90,7 @@ class _AlbumFlowPageState extends State<AlbumFlowPage> {
                             valueListenable: _pageNotifier,
                             builder: (context, value, child) {
                               return ListView.builder(
+                                physics: const BouncingScrollPhysics(),
                                 padding: const EdgeInsets.only(
                                     top: 100, left: 25, right: 25),
                                 controller: _pageController,

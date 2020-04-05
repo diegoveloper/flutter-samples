@@ -241,200 +241,211 @@ class _SportsStorePageState extends State<SportsStorePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: _buildBottomNavigationBar(),
-      body: Padding(
-        padding: const EdgeInsets.only(top: 20.0),
-        child: Column(
-          children: [
-            _buildHeader(),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 46),
-                child: Stack(
-                  children: [
-                    Positioned(
-                      left: 0,
-                      top: 0,
-                      width: MediaQuery.of(context).size.width / 3,
-                      bottom: 20,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: leftMargin),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Spacer(),
-                            ValueListenableBuilder<int>(
-                                valueListenable: _priceNotifier,
-                                builder: (context, value, child) {
-                                  return TweenAnimationBuilder<int>(
-                                    duration: const Duration(milliseconds: 200),
-                                    tween:
-                                        IntTween(begin: lastPrice, end: value),
-                                    builder: (context, animationValue, child) {
-                                      return Text(
-                                        "\$$animationValue",
-                                        style: TextStyle(
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.w600,
-                                          color: Colors.grey[700],
-                                        ),
-                                      );
-                                    },
-                                  );
-                                }),
-                            Spacer(),
-                            Text(
-                              'Available size',
-                              textAlign: TextAlign.start,
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 12,
+    return Theme(
+      data: ThemeData.light(),
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        bottomNavigationBar: _buildBottomNavigationBar(),
+        body: Padding(
+          padding: const EdgeInsets.only(top: 20.0),
+          child: Column(
+            children: [
+              _buildHeader(),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 46),
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        top: 0,
+                        width: MediaQuery.of(context).size.width / 3,
+                        bottom: 20,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: leftMargin),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Spacer(),
+                              ValueListenableBuilder<int>(
+                                  valueListenable: _priceNotifier,
+                                  builder: (context, value, child) {
+                                    return TweenAnimationBuilder<int>(
+                                      duration:
+                                          const Duration(milliseconds: 200),
+                                      tween: IntTween(
+                                          begin: lastPrice, end: value),
+                                      builder:
+                                          (context, animationValue, child) {
+                                        return Text(
+                                          "\$$animationValue",
+                                          style: TextStyle(
+                                            fontSize: 24,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.grey[700],
+                                          ),
+                                        );
+                                      },
+                                    );
+                                  }),
+                              Spacer(),
+                              Text(
+                                'Available size',
+                                textAlign: TextAlign.start,
+                                style: TextStyle(
+                                  color: Colors.grey[400],
+                                  fontSize: 12,
+                                ),
                               ),
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            SizedBox(
-                              height: 30,
-                              child: Row(
-                                children: [
-                                  Expanded(
-                                    child: OutlineButton(
-                                      onPressed: null,
-                                      child: Text(
-                                        '3',
-                                        textAlign: TextAlign.right,
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Expanded(
-                                    child: OutlineButton(
-                                      onPressed: null,
-                                      child: Text(
-                                        '4',
-                                        textAlign: TextAlign.right,
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Expanded(
-                                    child: OutlineButton(
-                                      onPressed: null,
-                                      child: Text(
-                                        '5',
-                                        textAlign: TextAlign.right,
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                              const SizedBox(
+                                height: 20,
                               ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    ValueListenableBuilder<double>(
-                      valueListenable: _pageNotifier,
-                      builder: (context, value, child) => PageView.builder(
-                        controller: _pageController,
-                        itemCount: balls.length,
-                        onPageChanged: (index) {
-                          //every time the page changed, get the current page and get the price from the balls array
-                          //update the value to the notifier and object inside [ValueListenableBuilder] will rebuild
-                          _priceNotifier.value = balls[index].price;
-                          lastPrice = balls[index].price;
-                        },
-                        itemBuilder: (context, index) {
-                          final lerp = lerpDouble(
-                              1, 0, (index - _pageNotifier.value).abs());
-
-                          double opacity = lerpDouble(
-                              1.0, 0.0, (index - _pageNotifier.value).abs());
-                          opacity = opacity < 0 ? 0 : opacity;
-                          return Opacity(
-                            opacity: opacity,
-                            child: Stack(
-                              fit: StackFit.expand,
-                              children: [
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                              SizedBox(
+                                height: 30,
+                                child: Row(
                                   children: [
                                     Expanded(
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                          top: 8.0,
-                                          left: 20,
+                                      child: OutlineButton(
+                                        onPressed: null,
+                                        child: Text(
+                                          '3',
+                                          textAlign: TextAlign.right,
                                         ),
-                                        child: Hero(
-                                          tag: 'hero_text_${balls[index].name}',
-                                          child: Material(
-                                            color: Colors.transparent,
-                                            child: Text(
-                                              balls[index]
-                                                  .name
-                                                  .split(" ")
-                                                  .join("\n"),
-                                              maxLines: 2,
-                                              textAlign: TextAlign.start,
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.w700,
-                                                fontSize: 24,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    Expanded(
+                                      child: OutlineButton(
+                                        onPressed: null,
+                                        child: Text(
+                                          '4',
+                                          textAlign: TextAlign.right,
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    Expanded(
+                                      child: OutlineButton(
+                                        onPressed: null,
+                                        child: Text(
+                                          '5',
+                                          textAlign: TextAlign.right,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      ValueListenableBuilder<double>(
+                        valueListenable: _pageNotifier,
+                        builder: (context, value, child) => PageView.builder(
+                          controller: _pageController,
+                          itemCount: balls.length,
+                          onPageChanged: (index) {
+                            //every time the page changed, get the current page and get the price from the balls array
+                            //update the value to the notifier and object inside [ValueListenableBuilder] will rebuild
+                            _priceNotifier.value = balls[index].price;
+                            lastPrice = balls[index].price;
+                          },
+                          itemBuilder: (context, index) {
+                            final lerp = lerpDouble(
+                                1, 0, (index - _pageNotifier.value).abs());
+
+                            double opacity = lerpDouble(
+                                1.0, 0.0, (index - _pageNotifier.value).abs());
+                            opacity = opacity < 0 ? 0 : opacity;
+                            return Opacity(
+                              opacity: opacity,
+                              child: Stack(
+                                fit: StackFit.expand,
+                                children: [
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Expanded(
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                            top: 8.0,
+                                            left: 20,
+                                          ),
+                                          child: Hero(
+                                            tag:
+                                                'hero_text_${balls[index].name}',
+                                            child: Material(
+                                              color: Colors.transparent,
+                                              child: Text(
+                                                balls[index]
+                                                    .name
+                                                    .split(" ")
+                                                    .join("\n"),
+                                                maxLines: 2,
+                                                textAlign: TextAlign.start,
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.w700,
+                                                  color: Colors.black,
+                                                  fontSize: 24,
+                                                ),
                                               ),
                                             ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    Expanded(
-                                      child: InkWell(
-                                        onTap: () {
-                                          Navigator.of(context)
-                                              .push(PageRouteBuilder(
-                                            transitionDuration: const Duration(
-                                                milliseconds: 800),
-                                            pageBuilder: (_, animation, __) =>
-                                                FadeTransition(
-                                              opacity: animation,
-                                              child: SportsStoreDetailPage(
-                                                ball: balls[index],
+                                      Expanded(
+                                        child: InkWell(
+                                          onTap: () {
+                                            Navigator.of(context)
+                                                .push(PageRouteBuilder(
+                                              transitionDuration:
+                                                  const Duration(
+                                                      milliseconds: 800),
+                                              pageBuilder: (_, animation, __) =>
+                                                  FadeTransition(
+                                                opacity: animation,
+                                                child: SportsStoreDetailPage(
+                                                  ball: balls[index],
+                                                ),
                                               ),
-                                            ),
-                                          ));
-                                        },
-                                        child: Hero(
-                                          tag:
-                                              'hero_background_${balls[index].name}',
-                                          child: Container(
-                                            decoration: BoxDecoration(
-                                              color: balls[index].color,
-                                              borderRadius:
-                                                  BorderRadius.circular(20.0),
-                                            ),
-                                            child: Align(
-                                              alignment: Alignment.bottomLeft,
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(30),
-                                                child: Material(
-                                                  color: Colors.transparent,
-                                                  child: Text(
-                                                    balls[index]
-                                                        .model
-                                                        .split(" ")
-                                                        .join("\n"),
-                                                    maxLines: 2,
-                                                    textAlign: TextAlign.start,
-                                                    style: TextStyle(
-                                                      color: balls[index]
-                                                          .textColor,
-                                                      fontWeight:
-                                                          FontWeight.w600,
+                                            ));
+                                          },
+                                          child: Hero(
+                                            tag:
+                                                'hero_background_${balls[index].name}',
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                color: balls[index].color,
+                                                borderRadius:
+                                                    BorderRadius.circular(20.0),
+                                              ),
+                                              child: Align(
+                                                alignment: Alignment.bottomLeft,
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(30),
+                                                  child: Material(
+                                                    color: Colors.transparent,
+                                                    child: Text(
+                                                      balls[index]
+                                                          .model
+                                                          .split(" ")
+                                                          .join("\n"),
+                                                      maxLines: 2,
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                      style: TextStyle(
+                                                        color: balls[index]
+                                                            .textColor,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
@@ -443,36 +454,37 @@ class _SportsStorePageState extends State<SportsStorePage> {
                                           ),
                                         ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                                Center(
-                                  child: Transform.scale(
-                                    alignment: Alignment.centerRight,
-                                    scale: lerp,
-                                    child: Hero(
-                                      tag: 'hero_ball_${balls[index].name}',
-                                      child: Image.asset(
-                                        balls[index].image,
-                                        height:
-                                            MediaQuery.of(context).size.width /
-                                                2.5,
+                                    ],
+                                  ),
+                                  Center(
+                                    child: Transform.scale(
+                                      alignment: Alignment.centerRight,
+                                      scale: lerp,
+                                      child: Hero(
+                                        tag: 'hero_ball_${balls[index].name}',
+                                        child: Image.asset(
+                                          balls[index].image,
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .width /
+                                              2.5,
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          );
-                        },
+                                ],
+                              ),
+                            );
+                          },
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-            ),
-            _buildBottomWidget(),
-          ],
+              _buildBottomWidget(),
+            ],
+          ),
         ),
       ),
     );

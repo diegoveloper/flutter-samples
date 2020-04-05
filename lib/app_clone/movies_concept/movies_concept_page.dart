@@ -27,12 +27,12 @@ const movies = [
   ),
 ];
 
-class PageViewAnimated extends StatefulWidget {
+class MoviesConceptPage extends StatefulWidget {
   @override
-  _PageViewAnimatedState createState() => _PageViewAnimatedState();
+  _MoviesConceptPageState createState() => _MoviesConceptPageState();
 }
 
-class _PageViewAnimatedState extends State<PageViewAnimated> {
+class _MoviesConceptPageState extends State<MoviesConceptPage> {
   final pageController = PageController(viewportFraction: 0.7);
   final ValueNotifier<double> _pageNotifier = ValueNotifier(0.0);
 
@@ -130,6 +130,7 @@ class _PageViewAnimatedState extends State<PageViewAnimated> {
                     child: Align(
                       alignment: Alignment.bottomCenter,
                       child: Card(
+                        color: Colors.white,
                         borderOnForeground: true,
                         elevation: 4,
                         shape: RoundedRectangleBorder(
@@ -165,6 +166,7 @@ class _PageViewAnimatedState extends State<PageViewAnimated> {
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w700,
+                                      color: Colors.black,
                                       fontSize: 24,
                                     ),
                                   ),
