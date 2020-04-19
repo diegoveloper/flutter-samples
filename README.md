@@ -54,9 +54,9 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 | <center> <img src="https://media.giphy.com/media/RJn8BMmOzfaW101iS2/giphy.gif" width="250"> </center> | <center> <img src="https://media.giphy.com/media/MeP49gjvFbUDShkzJM/giphy.gif" width="250">
  </center>
 
-   | App Clone / Album Flow  |   |
+   | App Clone / Album Flow  | App Clone / Credit Cards Concept  |
 |--|--|
 | <center> <center> <img src="https://media.giphy.com/media/emGlZPMbFpkNDrFuO7/giphy.gif" width="250"/>
- </center>  <center> <center> 
+ </center>  <center> <img src="https://media.giphy.com/media/UrsStRAMXOT93wwyP2/giphy.gif" width="250"/> <center> 
  </center>
 

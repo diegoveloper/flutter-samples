@@ -43,6 +43,7 @@ flutter:
     - images/characters/
     - images/balls/
     - images/shoes/
+    - images/credit_cards/
     - assets/
 
   # To add custom fonts to your application, add a fonts section here,
