@@ -5,7 +5,7 @@ class Photo {
   Photo._({this.title, this.thumbnailUrl});
 
   factory Photo.fromJson(Map<String, dynamic> json) {
-    return new Photo._(
+    return Photo._(
       title: json['title'],
       thumbnailUrl: json['thumbnailUrl'],
     );

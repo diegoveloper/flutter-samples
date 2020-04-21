@@ -40,7 +40,7 @@ class _MainFetchDataState extends State<MainFetchData> {
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.all(8.0),
           child: RaisedButton(
-            child: new Text("Fetch Data"),
+            child: Text("Fetch Data"),
             onPressed: _fetchData,
           ),
         ),
@@ -53,8 +53,8 @@ class _MainFetchDataState extends State<MainFetchData> {
                 itemBuilder: (BuildContext context, int index) {
                   return ListTile(
                     contentPadding: EdgeInsets.all(10.0),
-                    title: new Text(list[index].title),
-                    trailing: new Image.network(
+                    title: Text(list[index].title),
+                    trailing: Image.network(
                       list[index].thumbnailUrl,
                       fit: BoxFit.cover,
                       height: 40.0,

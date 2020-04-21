@@ -15,12 +15,12 @@ class _Page1State extends State<Page1> {
     final response =
         await http.get("https://jsonplaceholder.typicode.com/posts/");
     if (response.statusCode == 200) {
-     await new Future.delayed(const Duration(seconds: 1));
-     if (mounted){
+      await Future.delayed(const Duration(seconds: 1));
+      if (mounted) {
         setState(() {
           list = json.decode(response.body) as List;
         });
-     }
+      }
     } else {
       throw Exception('Failed to load posts');
     }

@@ -16,7 +16,7 @@ class _Page2State extends State<Page2>
     final response =
         await http.get("https://jsonplaceholder.typicode.com/photos/");
     if (response.statusCode == 200) {
-      await new Future.delayed(const Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 1));
       if (mounted) {
         setState(() {
           list = json.decode(response.body) as List;
