@@ -71,7 +71,7 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
   @override
   Widget build(BuildContext context) {
     final rotationRequired = !widget.isDetail;
-
+    timeDilation = 1.0;
     return Hero(
       tag: widget.card.number,
       flightShuttleBuilder: (
@@ -90,10 +90,11 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
               : toHero.child,
           builder: (context, child) {
             double rotateZ = 0.0;
+            final t = Curves.slowMiddle.transform(animation.value);
             if (flightDirection == HeroFlightDirection.push) {
-              rotateZ = lerpDouble(-90, 0, animation.value);
+              rotateZ = lerpDouble(-90, 0, t);
             } else {
-              rotateZ = lerpDouble(0, 90, animation.value);
+              rotateZ = lerpDouble(0, 90, t);
             }
             return Transform(
               alignment: FractionalOffset.center,
