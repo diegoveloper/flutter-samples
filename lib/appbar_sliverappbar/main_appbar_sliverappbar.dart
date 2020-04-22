@@ -3,6 +3,7 @@ import 'package:flutter_samples/appbar_sliverappbar/sample1.dart';
 import 'package:flutter_samples/appbar_sliverappbar/sample2.dart';
 
 import '../main.dart';
+import 'sample3.dart';
 
 class MainAppBarSliverAppBar extends StatelessWidget {
   onButtonTap(Widget page, BuildContext context) {
@@ -30,6 +31,12 @@ class MainAppBarSliverAppBar extends StatelessWidget {
               title: "Sample 2 - SliverAppBar",
               actionTap: () {
                 onButtonTap(Sample2(), context);
+              },
+            ),
+            MyMenuButton(
+              title: "Sample 3 - SliverAppBar with Strech",
+              actionTap: () {
+                onButtonTap(Sample3(), context);
               },
             ),
           ],

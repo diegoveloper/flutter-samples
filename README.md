@@ -58,3 +58,7 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 |--|--|
 | <center> <img src="https://media.giphy.com/media/emGlZPMbFpkNDrFuO7/giphy.gif" width="250"/> </center> | <center> <img src="https://media.giphy.com/media/UrsStRAMXOT93wwyP2/giphy.gif" width="250"/> </center>
 
+   | [Custom AppBar & SliverAppBar](https://medium.com/@diegoveloper/flutter-sliverappbar-with-stretchy-header-9ca04f316ff0) |  |
+|--|--|
+| <center> <img src="https://media.giphy.com/media/QuIvsrhjCr4oPS49qa/giphy.gif" width="250"/> </center> | <center>  </center>
+
