@@ -60,5 +60,5 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 
    | [Custom AppBar & SliverAppBar](https://medium.com/@diegoveloper/flutter-sliverappbar-with-stretchy-header-9ca04f316ff0) | [App Clone / Travel Concept Demo](https://www.youtube.com/watch?v=VXdpxnjmy0M) |
 |--|--|
-| <center> <img src="https://media.giphy.com/media/gF30YeWCn0Ncf0qxCS/giphy.gif" width="250"/> </center> | <center>  </center>
+| <center> <img src="https://media.giphy.com/media/QuIvsrhjCr4oPS49qa/giphy.gif" width="250"/> </center> | <center> <img src="https://media.giphy.com/media/gF30YeWCn0Ncf0qxCS/giphy.gif" width="250"/>
 
