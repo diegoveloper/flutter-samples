@@ -17,22 +17,18 @@ class _TravelConceptPageState extends State<TravelConceptPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Stack(fit: StackFit.expand, children: [
-        Positioned.fill(
-          child: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  backgroundColor.withOpacity(0.5),
-                  backgroundColor,
-                ],
-              ),
-            ),
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              backgroundColor.withOpacity(0.5),
+              backgroundColor,
+            ],
           ),
         ),
-        Scaffold(
+        child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             backgroundColor: Colors.transparent,
@@ -84,7 +80,7 @@ class _TravelConceptPageState extends State<TravelConceptPage> {
             ],
           ),
         ),
-      ]),
+      ),
     );
   }
 }
