@@ -6,6 +6,7 @@ import 'package:flutter_samples/app_clone/movies_concept/movies_concept_page.dar
 import 'package:flutter_samples/app_clone/photo_concept/photo_concept_page.dart';
 import 'package:flutter_samples/app_clone/shoes_store/shoes_store_page.dart';
 import 'package:flutter_samples/app_clone/sports_store/sports_store_page.dart';
+import 'package:flutter_samples/app_clone/travel_concept/travel_concept_page.dart';
 import 'package:flutter_samples/app_clone/twitter_profile/twitter_profile_page.dart';
 import 'package:flutter_samples/main.dart';
 
@@ -78,6 +79,12 @@ class MainAppCloneState extends State<MainAppsClone> {
               title: "Credit Cards Concept",
               actionTap: () {
                 onButtonTap(CreditCardConceptPage());
+              },
+            ),
+            MyMenuButton(
+              title: "Travel Concept",
+              actionTap: () {
+                onButtonTap(TravelConceptPage());
               },
             ),
           ],
