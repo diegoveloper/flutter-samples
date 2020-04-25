@@ -40,9 +40,9 @@ class TravelConceptDetailPage extends StatelessWidget {
                   backgroundImage: NetworkImage(avatars.last),
                   radius: 15,
                 ),
-                title: Text('Argel Bejarano'),
-                subtitle:
-                    Text('description ..... $index\n line 22222 \nline 33'),
+                title: Text('The Dart Side'),
+                subtitle: Text(
+                    'Come to the Dart Side :) ..... $index\nline 22222 \nline 33'),
               ),
             );
           })

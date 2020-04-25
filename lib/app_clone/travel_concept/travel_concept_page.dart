@@ -119,7 +119,6 @@ class _TravelItemState extends State<TravelItem> {
             }),
       );
     } else {
-      print('tap');
       setState(() {
         _selected = !_selected;
       });
@@ -144,6 +143,9 @@ class _TravelItemState extends State<TravelItem> {
 
   @override
   Widget build(BuildContext context) {
+    if (!widget.itemSelected) {
+      _selected = false;
+    }
     return LayoutBuilder(builder: (context, constraints) {
       final itemHeight =
           constraints.maxHeight * (widget.itemSelected ? 0.55 : 0.52);
