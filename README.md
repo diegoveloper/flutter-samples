@@ -2,7 +2,7 @@
 
 You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegoveloper)
 
-<a href='https://www.buymeacoffee.com/diegoveloper' target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"/></a>
+<a href='https://www.buymeacoffee.com/diegoveloper' target="_blank" rel="noopener noreferrer"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"/></a>
 
 
  
