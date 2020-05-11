@@ -4,8 +4,9 @@ class Sample2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Material(
-        child: CustomScrollView(
+      child: Scaffold(
+        drawer: Drawer(),
+        body: CustomScrollView(
           slivers: [
             SliverPersistentHeader(
               delegate: MySliverAppBar(expandedHeight: 200),
@@ -14,8 +15,8 @@ class Sample2 extends StatelessWidget {
             SliverList(
               delegate: SliverChildBuilderDelegate(
                 (_, index) => ListTile(
-                      title: Text("Index: $index"),
-                    ),
+                  title: Text("Index: $index"),
+                ),
               ),
             )
           ],
@@ -31,8 +32,7 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
   MySliverAppBar({@required this.expandedHeight});
 
   @override
-  Widget build(
-      BuildContext context, double shrinkOffset, bool overlapsContent) {
+  Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Stack(
       fit: StackFit.expand,
       overflow: Overflow.visible,
@@ -67,6 +67,18 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
                 child: FlutterLogo(),
               ),
             ),
+          ),
+        ),
+        Align(
+          alignment: Alignment.topLeft,
+          child: IconButton(
+            icon: Icon(
+              Icons.menu,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
           ),
         ),
       ],
