@@ -36,22 +36,26 @@ class _Page2State extends State<Page2>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return Container(
-      child: ListView.builder(
-        itemCount: list.length,
-        itemBuilder: (BuildContext context, int index) {
-          final data = list[index];
-          return ListTile(
-            contentPadding: EdgeInsets.all(10.0),
-            title: Text(data['title']),
-            trailing: Image.network(
-              data['thumbnailUrl'],
-              height: 20.0,
-              width: 20.0,
-            ),
-          );
-        },
-      ),
+    return Column(
+      children: <Widget>[
+        Expanded(
+          child: ListView.builder(
+            itemCount: list.length,
+            itemBuilder: (BuildContext context, int index) {
+              final data = list[index];
+              return ListTile(
+                contentPadding: EdgeInsets.all(10.0),
+                title: Text(data['title']),
+                trailing: Image.network(
+                  data['thumbnailUrl'],
+                  height: 20.0,
+                  width: 20.0,
+                ),
+              );
+            },
+          ),
+        ),
+      ],
     );
   }
 
