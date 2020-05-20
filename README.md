@@ -65,3 +65,6 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 |--|--|
 | <center> <img src="https://media.giphy.com/media/QuIvsrhjCr4oPS49qa/giphy.gif" width="250"/> </center> | <center> <img src="https://media.giphy.com/media/gF30YeWCn0Ncf0qxCS/giphy.gif" width="250"/>
 
+   | [Animations / Shrink Top List](https://www.youtube.com/watch?v=becUP_s-KfU) |   |
+|--|--|
+| <center> <img src="https://media.giphy.com/media/XFproCCYQ9eDR416g1/giphy.gif" width="250"/> </center> | <center> </center>

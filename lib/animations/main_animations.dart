@@ -10,6 +10,7 @@ import 'package:flutter_samples/main.dart';
 
 import 'custom_sliverheader/custom_sliver_header.dart';
 import 'hide_my_widgets/main_hide_my_widgets.dart';
+import 'shrink_top_list/shrink_top_list_page.dart';
 
 class MainAnimations extends StatefulWidget {
   @override
@@ -20,8 +21,7 @@ class MainAnimations extends StatefulWidget {
 
 class MainAnimationsState extends State<MainAnimations> {
   onButtonTap(Widget page) {
-    Navigator.push(
-        context, MaterialPageRoute(builder: (BuildContext context) => page));
+    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => page));
   }
 
   @override
@@ -86,6 +86,12 @@ class MainAnimationsState extends State<MainAnimations> {
               title: "Menu Exploration",
               actionTap: () {
                 onButtonTap(MainMenuExploration());
+              },
+            ),
+            MyMenuButton(
+              title: "Shrink Top List",
+              actionTap: () {
+                onButtonTap(ShrinkTopListPage());
               },
             ),
           ],
