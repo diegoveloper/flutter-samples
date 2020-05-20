@@ -34,20 +34,26 @@ class _Page1State extends State<Page1> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: list.length,
-      itemBuilder: (BuildContext context, int index) {
-        final data = list[index];
-        return ListTile(
-          contentPadding: EdgeInsets.all(10.0),
-          title: Text(data['title']),
-          subtitle: Text(
-            data['body'],
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
+    return Column(
+      children: <Widget>[
+        Expanded(
+          child: ListView.builder(
+            itemCount: list.length,
+            itemBuilder: (BuildContext context, int index) {
+              final data = list[index];
+              return ListTile(
+                contentPadding: EdgeInsets.all(10.0),
+                title: Text(data['title']),
+                subtitle: Text(
+                  data['body'],
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              );
+            },
           ),
-        );
-      },
+        ),
+      ],
     );
   }
 }
