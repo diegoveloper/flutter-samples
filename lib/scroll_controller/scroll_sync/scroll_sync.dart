@@ -39,17 +39,17 @@ class _ScrollSyncState extends State<ScrollSync> {
               controller: _controller1,
               scrollDirection: Axis.horizontal,
               itemBuilder: (_, index) => Container(
-                    color: Colors.red,
-                    width: 150,
-                    margin: EdgeInsets.all(10.0),
-                    child: Center(
-                      child: Text(
-                        "$index",
-                        textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.display2,
-                      ),
-                    ),
+                color: Colors.red,
+                width: 150,
+                margin: EdgeInsets.all(10.0),
+                child: Center(
+                  child: Text(
+                    "$index",
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline3,
                   ),
+                ),
+              ),
             ),
           ),
           Flexible(
@@ -57,18 +57,18 @@ class _ScrollSyncState extends State<ScrollSync> {
             child: ListView.builder(
               controller: _controller2,
               itemBuilder: (_, index) => Container(
-                    color: Colors.black,
-                    margin: EdgeInsets.all(10.0),
-                    child: Center(
-                      child: Text(
-                        "$index",
-                        style: Theme.of(context)
-                            .textTheme
-                            .display2
-                            .copyWith(color: Colors.white),
-                      ),
-                    ),
+                color: Colors.black,
+                margin: EdgeInsets.all(10.0),
+                child: Center(
+                  child: Text(
+                    "$index",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline3
+                        .copyWith(color: Colors.white),
                   ),
+                ),
+              ),
             ),
           ),
         ],

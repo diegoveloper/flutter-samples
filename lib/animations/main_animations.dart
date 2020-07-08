@@ -21,7 +21,8 @@ class MainAnimations extends StatefulWidget {
 
 class MainAnimationsState extends State<MainAnimations> {
   onButtonTap(Widget page) {
-    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => page));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (BuildContext context) => page));
   }
 
   @override

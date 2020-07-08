@@ -65,8 +65,10 @@ class _ShrinkTopListPageState extends State<ShrinkTopListPage> {
                   final heightFactor = 0.6;
                   final character = characters[index];
                   final itemPositionOffset = index * itemSize * heightFactor;
-                  final difference = scrollController.offset - itemPositionOffset;
-                  final percent = 1.0 - (difference / (itemSize * heightFactor));
+                  final difference =
+                      scrollController.offset - itemPositionOffset;
+                  final percent =
+                      1.0 - (difference / (itemSize * heightFactor));
                   double opacity = percent;
                   double scale = percent;
                   if (opacity > 1.0) opacity = 1.0;

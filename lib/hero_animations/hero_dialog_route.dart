@@ -34,7 +34,6 @@ class HeroDialogRoute<T> extends PageRoute<T> {
     return builder(context);
   }
 
-  // TODO: implement barrierLabel
   @override
   String get barrierLabel => null;
 }

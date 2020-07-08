@@ -59,7 +59,6 @@ class _Page2State extends State<Page2>
     );
   }
 
-  // TODO: implement wantKeepAlive
   @override
   bool get wantKeepAlive => true;
 }

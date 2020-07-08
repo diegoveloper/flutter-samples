@@ -27,7 +27,10 @@ class Page2 extends StatelessWidget {
                 tag: "hero2",
                 child: Material(
                     color: Colors.transparent,
-                    child: Text("Hero Text", style: TextStyle(fontSize: 40.0),)),
+                    child: Text(
+                      "Hero Text",
+                      style: TextStyle(fontSize: 40.0),
+                    )),
               ),
             ),
             OutlineButton(

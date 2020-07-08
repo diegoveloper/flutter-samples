@@ -81,7 +81,7 @@ class CustomSliverDelegate extends SliverPersistentHeaderDelegate {
                       child: Text(
                         description,
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.title,
+                        style: Theme.of(context).textTheme.headline6,
                       ),
                     ),
                   ),

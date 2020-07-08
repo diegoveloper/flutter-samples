@@ -3,6 +3,7 @@ import 'package:flutter_samples/app_clone/credit_cards_concept/credit_card.dart'
 import 'package:flutter_samples/app_clone/credit_cards_concept/credit_cards_concept_detail_page.dart';
 import 'credit_card_widget.dart';
 
+//ignore: must_be_immutable
 class CreditCardConceptPage extends StatelessWidget {
   final pageNotifier = ValueNotifier(0);
   int _lastPage = 0;
@@ -31,7 +32,7 @@ class CreditCardConceptPage extends StatelessWidget {
                 children: [
                   Text(
                     'Bank Cards',
-                    style: textTheme.display1.copyWith(
+                    style: textTheme.headline4.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),
@@ -39,7 +40,7 @@ class CreditCardConceptPage extends StatelessWidget {
                   const SizedBox(height: 20),
                   Text(
                     'Balance',
-                    style: textTheme.subtitle.copyWith(
+                    style: textTheme.subtitle2.copyWith(
                       color: Colors.grey,
                     ),
                   ),
@@ -57,7 +58,7 @@ class CreditCardConceptPage extends StatelessWidget {
                           duration: const Duration(milliseconds: 500),
                           builder: (_, value, ___) => Text(
                             value.toStringAsFixed(2),
-                            style: textTheme.title.copyWith(
+                            style: textTheme.headline6.copyWith(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                             ),

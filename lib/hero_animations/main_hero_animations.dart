@@ -72,8 +72,7 @@ class _MainHeroAnimationsPageState extends State<MainHeroAnimationsPage> {
                     color: Colors.transparent,
                     child: Text(
                       "Sample Hero",
-                      style:
-                          TextStyle(fontSize: 14.0, color: Colors.black),
+                      style: TextStyle(fontSize: 14.0, color: Colors.black),
                     ),
                   ))
             ],

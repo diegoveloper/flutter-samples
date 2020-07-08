@@ -25,7 +25,7 @@ class Child2PageState extends State<Child2Page> {
         children: [
           Text(
             title ?? value,
-            style: Theme.of(context).primaryTextTheme.headline,
+            style: Theme.of(context).primaryTextTheme.headline5,
           ),
         ],
       ),

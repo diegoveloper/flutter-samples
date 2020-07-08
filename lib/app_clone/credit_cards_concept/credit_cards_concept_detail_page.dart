@@ -36,7 +36,7 @@ class CreditCardsConceptDetailPage extends StatelessWidget {
                           Text(
                             'Full card',
                             textAlign: TextAlign.center,
-                            style: textTheme.title.copyWith(
+                            style: textTheme.headline6.copyWith(
                               color: Colors.white,
                             ),
                           ),
@@ -46,7 +46,7 @@ class CreditCardsConceptDetailPage extends StatelessWidget {
                           Text(
                             'Rotable the card to view the security code',
                             textAlign: TextAlign.center,
-                            style: textTheme.subtitle.copyWith(
+                            style: textTheme.subtitle2.copyWith(
                               color: Colors.grey[400],
                             ),
                           ),
@@ -66,7 +66,7 @@ class CreditCardsConceptDetailPage extends StatelessWidget {
                         child: Text(
                           'Today',
                           textAlign: TextAlign.left,
-                          style: textTheme.title.copyWith(
+                          style: textTheme.headline6.copyWith(
                             color: Colors.white,
                           ),
                         ),

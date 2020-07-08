@@ -133,10 +133,10 @@ class MyHeaderDelegate extends SliverPersistentHeaderDelegate {
               child: Column(mainAxisSize: MainAxisSize.min, children: [
                 Expanded(
                     child: Text("Full Name",
-                        style: Theme.of(context).textTheme.display1)),
+                        style: Theme.of(context).textTheme.headline4)),
                 Expanded(
                   child: Text("email@email.com",
-                      style: Theme.of(context).textTheme.title),
+                      style: Theme.of(context).textTheme.headline6),
                 )
               ]),
             ),

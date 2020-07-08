@@ -32,7 +32,8 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
   MySliverAppBar({@required this.expandedHeight});
 
   @override
-  Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
+  Widget build(
+      BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Stack(
       fit: StackFit.expand,
       overflow: Overflow.visible,

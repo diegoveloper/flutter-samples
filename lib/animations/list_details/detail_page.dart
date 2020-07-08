@@ -63,11 +63,11 @@ class _DetailPageState extends State<DetailPage>
                 AnimatedBuilder(
                   animation: _controller,
                   builder: (context, widget) => Transform.translate(
-                        transformHitTests: false,
-                        offset: Offset.lerp(
-                            Offset(0.0, 200.0), Offset.zero, _controller.value),
-                        child: widget,
-                      ),
+                    transformHitTests: false,
+                    offset: Offset.lerp(
+                        Offset(0.0, 200.0), Offset.zero, _controller.value),
+                    child: widget,
+                  ),
                   child: Padding(
                     padding: EdgeInsets.all(10),
                     child: Text(
