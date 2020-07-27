@@ -5,6 +5,18 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 <a href='https://www.buymeacoffee.com/diegoveloper' target="_blank" rel="noopener noreferrer"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"/></a>
 
 
+
+
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/YouTube_Logo.svg/800px-YouTube_Logo.svg.png' width="250">
+
+
+
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/_yL6bHB6oPA/0.jpg)](http://www.youtube.com/watch?v=_yL6bHB6oPA "diegoveloper")
+
+
+## FLUTTER SAMPLES
+
  
  | [**Hello Flutter**](https://medium.com/@diegoveloper/hello-flutter-eb49e9b27916)      | [**Splash screen in Flutter**](https://medium.com/@diegoveloper/flutter-splash-screen-9f4e05542548)     | 
 |------------|-------------| 
