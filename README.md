@@ -9,7 +9,15 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 
 <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/YouTube_Logo.svg/800px-YouTube_Logo.svg.png' width="250">
 
+## Getting Started
+To build and run this project:
 
+1. Get Flutter [here](https://flutter.dev) if you don't already have it
+2. Clone this repository.
+3. `cd` into the repo folder.
+4. run `flutter run-android` or `flutter run-ios` to build the app.
+
+(Please note that a Mac with XCode is required to build for iOS)
 
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/_yL6bHB6oPA/0.jpg)](http://www.youtube.com/watch?v=_yL6bHB6oPA "diegoveloper")
