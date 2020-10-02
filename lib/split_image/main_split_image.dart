@@ -17,7 +17,7 @@ class _MainSplitImageState extends State<MainSplitImage> {
         AssetImage("images/characters/broly.png", bundle: rootBundle);
     final imageKey = await assetImage.obtainKey(ImageConfiguration());
     final DecoderCallback decodeResize =
-        (Uint8List bytes, {int cacheWidth, int cacheHeight}) {
+        (Uint8List bytes, {bool allowUpscaling,int cacheWidth, int cacheHeight}) {
       return ui.instantiateImageCodec(bytes,
           targetHeight: cacheHeight, targetWidth: cacheWidth);
     };
