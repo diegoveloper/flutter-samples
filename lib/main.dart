@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_samples/animations/main_animations.dart';
 import 'package:flutter_samples/app_clone/main_apps_clone.dart';
 import 'package:flutter_samples/appbar_sliverappbar/main_appbar_sliverappbar.dart';
@@ -29,12 +30,12 @@ class MyApp extends StatefulWidget {
 
 class MyAppState extends State<MyApp> {
   onButtonTap(Widget page) {
-    Navigator.push(
-        context, MaterialPageRoute(builder: (BuildContext context) => page));
+    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => page));
   }
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
     return Scaffold(
       appBar: AppBar(
         title: Text("Flutter Samples"),
