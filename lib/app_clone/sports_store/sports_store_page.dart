@@ -159,25 +159,25 @@ class _SportsStorePageState extends State<SportsStorePage> {
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            title: Text(''),
+            label: '',
             icon: Icon(
               Icons.home,
             ),
           ),
           BottomNavigationBarItem(
-            title: Text(''),
+            label: '',
             icon: Icon(
               Icons.shopping_basket,
             ),
           ),
           BottomNavigationBarItem(
-            title: Text(''),
+            label: '',
             icon: Icon(
               Icons.shopping_cart,
             ),
           ),
           BottomNavigationBarItem(
-            title: Text(''),
+            label: '',
             icon: Icon(
               Icons.wb_sunny,
             ),

@@ -39,23 +39,23 @@ class Sample3 extends StatelessWidget {
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.library_music),
-              title: Text('Library'),
+              label: 'Library',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.favorite),
-              title: Text('Favorites'),
+              label: 'Favorites',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.music_note),
-              title: Text('Songs'),
+              label: 'Songs',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.settings_input_antenna),
-              title: Text('Radio'),
+              label: 'Radio',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.search),
-              title: Text('Search'),
+              label: 'Search',
             ),
           ],
         ),

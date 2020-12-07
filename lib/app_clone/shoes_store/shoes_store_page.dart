@@ -244,31 +244,31 @@ class _ShoesStorePageState extends State<ShoesStorePage> {
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            title: Text(''),
+            label: '',
             icon: Icon(
               Icons.home,
             ),
           ),
           BottomNavigationBarItem(
-            title: Text(''),
+            label: '',
             icon: Icon(
               Icons.favorite_border,
             ),
           ),
           BottomNavigationBarItem(
-            title: Text(''),
+            label: '',
             icon: Icon(
               Icons.location_city,
             ),
           ),
           BottomNavigationBarItem(
-            title: Text(''),
+            label: '',
             icon: Icon(
               Icons.shopping_cart,
             ),
           ),
           BottomNavigationBarItem(
-            title: Text(''),
+            label: '',
             icon: Icon(
               Icons.person_outline,
             ),
