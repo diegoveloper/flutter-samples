@@ -13,8 +13,8 @@ class _Page2State extends State<Page2>
   var list = List();
 
   _loadList() async {
-    final response =
-        await http.get("https://jsonplaceholder.typicode.com/photos/");
+    final response = await http
+        .get(Uri.parse("https://jsonplaceholder.typicode.com/photos/"));
     if (response.statusCode == 200) {
       await Future.delayed(const Duration(seconds: 1));
       if (mounted) {
