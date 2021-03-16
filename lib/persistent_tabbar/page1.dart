@@ -12,8 +12,8 @@ class _Page1State extends State<Page1> {
   var list = List();
 
   _loadList() async {
-    final response =
-        await http.get("https://jsonplaceholder.typicode.com/posts/");
+    final response = await http
+        .get(Uri.parse("https://jsonplaceholder.typicode.com/posts/"));
     if (response.statusCode == 200) {
       await Future.delayed(const Duration(seconds: 1));
       if (mounted) {

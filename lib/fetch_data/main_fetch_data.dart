@@ -17,8 +17,8 @@ class _MainFetchDataState extends State<MainFetchData> {
     setState(() {
       isLoading = true;
     });
-    final response =
-        await http.get("https://jsonplaceholder.typicode.com/photos");
+    final response = await http
+        .get(Uri.parse("https://jsonplaceholder.typicode.com/photos"));
     if (response.statusCode == 200) {
       list = (json.decode(response.body) as List)
           .map((data) => new Photo.fromJson(data))
