@@ -30,7 +30,8 @@ class MyApp extends StatefulWidget {
 
 class MyAppState extends State<MyApp> {
   onButtonTap(Widget page) {
-    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => page));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (BuildContext context) => page));
   }
 
   @override
@@ -141,8 +142,8 @@ class MyAppState extends State<MyApp> {
 }
 
 class MyMenuButton extends StatelessWidget {
-  final String title;
-  final VoidCallback actionTap;
+  final String? title;
+  final VoidCallback? actionTap;
 
   MyMenuButton({this.title, this.actionTap});
 
@@ -154,7 +155,7 @@ class MyMenuButton extends StatelessWidget {
         height: 50.0,
         color: Theme.of(context).primaryColor,
         textColor: Colors.white,
-        child: new Text(title),
+        child: new Text(title!),
         onPressed: actionTap,
       ),
     );

@@ -9,7 +9,7 @@ class Page1 extends StatefulWidget {
 }
 
 class _Page1State extends State<Page1> {
-  var list = List();
+  List<dynamic>? list = [];
 
   _loadList() async {
     final response = await http
@@ -18,7 +18,7 @@ class _Page1State extends State<Page1> {
       await Future.delayed(const Duration(seconds: 1));
       if (mounted) {
         setState(() {
-          list = json.decode(response.body) as List;
+          list = json.decode(response.body) as List?;
         });
       }
     } else {
@@ -38,9 +38,9 @@ class _Page1State extends State<Page1> {
       children: <Widget>[
         Expanded(
           child: ListView.builder(
-            itemCount: list.length,
+            itemCount: list!.length,
             itemBuilder: (BuildContext context, int index) {
-              final data = list[index];
+              final data = list![index];
               return ListTile(
                 contentPadding: EdgeInsets.all(10.0),
                 title: Text(data['title']),

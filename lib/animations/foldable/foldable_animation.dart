@@ -8,7 +8,7 @@ class FoldablePage extends StatefulWidget {
 
 class _FoldableState extends State<FoldablePage>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {
@@ -128,15 +128,15 @@ class _FoldableState extends State<FoldablePage>
 
 class FoldableItem extends AnimatedWidget {
   final Animation<double> animation;
-  final Widget child;
-  final Widget lastChild;
+  final Widget? child;
+  final Widget? lastChild;
   final bool first;
   final double fullAngle = 180.0;
   final double halfAngle = 180.0 / 2.0;
   bool get hasLastChild => lastChild != null;
 
   FoldableItem({
-    this.animation,
+    required this.animation,
     this.child,
     this.first = false,
     this.lastChild,

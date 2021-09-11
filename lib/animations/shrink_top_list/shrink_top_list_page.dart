@@ -89,7 +89,7 @@ class _ShrinkTopListPageState extends State<ShrinkTopListPage> {
                               topRight: Radius.circular(20.0),
                             ),
                           ),
-                          color: Color(character.color),
+                          color: Color(character.color!),
                           child: SizedBox(
                             height: itemSize,
                             child: Row(
@@ -99,7 +99,7 @@ class _ShrinkTopListPageState extends State<ShrinkTopListPage> {
                                     padding: const EdgeInsets.all(15.0),
                                   ),
                                 ),
-                                Image.asset(character.avatar),
+                                Image.asset(character.avatar!),
                               ],
                             ),
                           ),

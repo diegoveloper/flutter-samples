@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class CreditCard {
-  final Color color;
-  final String number;
-  final String ccv;
-  final double amount;
+  final Color? color;
+  final String? number;
+  final String? ccv;
+  final double? amount;
 
   CreditCard({
     this.color,

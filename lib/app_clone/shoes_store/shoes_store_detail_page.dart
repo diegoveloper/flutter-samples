@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'shoes_store_page.dart';
 
 class ShoesStoreDetailPage extends StatelessWidget {
-  final Shoe shoe;
+  final Shoe? shoe;
 
-  const ShoesStoreDetailPage({Key key, this.shoe}) : super(key: key);
+  const ShoesStoreDetailPage({Key? key, this.shoe}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +20,10 @@ class ShoesStoreDetailPage extends StatelessWidget {
             width: size.width * 1.4,
             height: size.width * 1.4,
             child: Hero(
-              tag: 'hero_background_${shoe.name}',
+              tag: 'hero_background_${shoe!.name}',
               child: Container(
                 decoration: BoxDecoration(
-                  color: shoe.color,
+                  color: shoe!.color,
                   shape: BoxShape.circle,
                 ),
               ),
@@ -37,7 +37,7 @@ class ShoesStoreDetailPage extends StatelessWidget {
                     backgroundColor: Colors.transparent,
                     elevation: 0,
                     title: Text(
-                      shoe.name.split(' ').first,
+                      shoe!.name!.split(' ').first,
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 25,
@@ -50,9 +50,9 @@ class ShoesStoreDetailPage extends StatelessWidget {
                           elevation: 10,
                           shape: CircleBorder(
                               side: BorderSide(
-                            color: shoe.color,
+                            color: shoe!.color!,
                           )),
-                          color: shoe.color,
+                          color: shoe!.color,
                           child: Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: Icon(Icons.favorite_border),
@@ -66,9 +66,9 @@ class ShoesStoreDetailPage extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(top: size.height * 0.1),
               child: Hero(
-                tag: 'hero_image_${shoe.name}',
+                tag: 'hero_image_${shoe!.name}',
                 child: Image.asset(
-                  shoe.image,
+                  shoe!.image!,
                   height: MediaQuery.of(context).size.width / 1.2,
                 ),
               ),

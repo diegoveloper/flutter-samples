@@ -6,12 +6,12 @@ import 'package:flutter_samples/app_clone/sports_store/sports_store_detail_page.
 const leftMargin = 40.0;
 
 class Ball {
-  final int price;
-  final String model;
-  final String name;
-  final String image;
-  final Color color;
-  final Color textColor;
+  final int? price;
+  final String? model;
+  final String? name;
+  final String? image;
+  final Color? color;
+  final Color? textColor;
 
   const Ball({
     this.price,
@@ -61,11 +61,11 @@ class SportsStorePage extends StatefulWidget {
 }
 
 class _SportsStorePageState extends State<SportsStorePage> {
-  final _priceNotifier = ValueNotifier<int>(balls.first.price);
+  final _priceNotifier = ValueNotifier<int?>(balls.first.price);
 
   final _pageController = PageController(viewportFraction: 0.9);
 
-  final _pageNotifier = ValueNotifier<double>(0.0);
+  final _pageNotifier = ValueNotifier<double?>(0.0);
 
   Widget _buildHeader() {
     Widget _buildGroup(bool selected, IconData icon) {
@@ -132,7 +132,7 @@ class _SportsStorePageState extends State<SportsStorePage> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                color: Colors.grey[300],
+                color: Colors.grey[300]!,
                 width: 1,
               ),
             ),
@@ -222,7 +222,7 @@ class _SportsStorePageState extends State<SportsStorePage> {
   @override
   void initState() {
     lastPrice = balls.first.price;
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
       _pageController.addListener(_listener);
     });
     super.initState();
@@ -237,7 +237,7 @@ class _SportsStorePageState extends State<SportsStorePage> {
     super.dispose();
   }
 
-  int lastPrice = 0;
+  int? lastPrice = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -267,7 +267,7 @@ class _SportsStorePageState extends State<SportsStorePage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Spacer(),
-                              ValueListenableBuilder<int>(
+                              ValueListenableBuilder<int?>(
                                   valueListenable: _priceNotifier,
                                   builder: (context, value, child) {
                                     return TweenAnimationBuilder<int>(
@@ -344,7 +344,7 @@ class _SportsStorePageState extends State<SportsStorePage> {
                           ),
                         ),
                       ),
-                      ValueListenableBuilder<double>(
+                      ValueListenableBuilder<double?>(
                         valueListenable: _pageNotifier,
                         builder: (context, value, child) => PageView.builder(
                           controller: _pageController,
@@ -357,10 +357,10 @@ class _SportsStorePageState extends State<SportsStorePage> {
                           },
                           itemBuilder: (context, index) {
                             final lerp = lerpDouble(
-                                1, 0, (index - _pageNotifier.value).abs());
+                                1, 0, (index - _pageNotifier.value!).abs())!;
 
-                            double opacity = lerpDouble(
-                                1.0, 0.0, (index - _pageNotifier.value).abs());
+                            double opacity = lerpDouble(1.0, 0.0,
+                                (index - _pageNotifier.value!).abs())!;
                             opacity = opacity < 0 ? 0 : opacity;
                             return Opacity(
                               opacity: opacity,
@@ -384,7 +384,7 @@ class _SportsStorePageState extends State<SportsStorePage> {
                                               color: Colors.transparent,
                                               child: Text(
                                                 balls[index]
-                                                    .name
+                                                    .name!
                                                     .split(" ")
                                                     .join("\n"),
                                                 maxLines: 2,
@@ -434,7 +434,7 @@ class _SportsStorePageState extends State<SportsStorePage> {
                                                     color: Colors.transparent,
                                                     child: Text(
                                                       balls[index]
-                                                          .model
+                                                          .model!
                                                           .split(" ")
                                                           .join("\n"),
                                                       maxLines: 2,
@@ -463,7 +463,7 @@ class _SportsStorePageState extends State<SportsStorePage> {
                                       child: Hero(
                                         tag: 'hero_ball_${balls[index].name}',
                                         child: Image.asset(
-                                          balls[index].image,
+                                          balls[index].image!,
                                           height: MediaQuery.of(context)
                                                   .size
                                                   .width /

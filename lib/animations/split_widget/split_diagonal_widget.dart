@@ -4,8 +4,8 @@ class SplitDiagonalWidget extends StatefulWidget {
   final Widget child;
 
   const SplitDiagonalWidget({
-    Key key,
-    @required this.child,
+    Key? key,
+    required this.child,
   }) : super(key: key);
 
   @override
@@ -14,9 +14,9 @@ class SplitDiagonalWidget extends StatefulWidget {
 
 class _SplitDiagonalWidgetState extends State<SplitDiagonalWidget>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation<double> _animation;
-  double _childHeight;
+  late AnimationController _controller;
+  late Animation<double> _animation;
+  double? _childHeight;
   GlobalKey _childKey = GlobalKey();
 
   Widget _buildSide({bool top = true}) {
@@ -34,10 +34,10 @@ class _SplitDiagonalWidgetState extends State<SplitDiagonalWidget>
   }
 
   void _onLayoutDone(_) {
-    _childHeight = _childKey.currentContext.size.height;
+    _childHeight = _childKey.currentContext!.size!.height;
     _animation = Tween<double>(
       begin: 0.0,
-      end: _childHeight * 0.5,
+      end: _childHeight! * 0.5,
     ).animate(
       CurvedAnimation(
         parent: _controller,
@@ -54,7 +54,7 @@ class _SplitDiagonalWidgetState extends State<SplitDiagonalWidget>
       duration: Duration(seconds: 1),
     );
 
-    WidgetsBinding.instance.addPostFrameCallback(_onLayoutDone);
+    WidgetsBinding.instance!.addPostFrameCallback(_onLayoutDone);
     super.initState();
   }
 

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_samples/app_clone/sports_store/sports_store_page.dart';
 
 class SportsStoreDetailPage extends StatelessWidget {
-  final Ball ball;
+  final Ball? ball;
 
-  const SportsStoreDetailPage({Key key, this.ball}) : super(key: key);
+  const SportsStoreDetailPage({Key? key, this.ball}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +21,10 @@ class SportsStoreDetailPage extends StatelessWidget {
               width: size.width / 2.5,
               height: size.height / 1.8,
               child: Hero(
-                tag: 'hero_background_${ball.name}',
+                tag: 'hero_background_${ball!.name}',
                 child: Container(
                   decoration: BoxDecoration(
-                    color: ball.color,
+                    color: ball!.color,
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(30),
                     ),
@@ -36,11 +36,11 @@ class SportsStoreDetailPage extends StatelessWidget {
               left: 30,
               top: 100,
               child: Hero(
-                tag: 'hero_text_${ball.name}',
+                tag: 'hero_text_${ball!.name}',
                 child: Material(
                   color: Colors.transparent,
                   child: Text(
-                    ball.name.split(' ').join('\n'),
+                    ball!.name!.split(' ').join('\n'),
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 40,
@@ -53,9 +53,9 @@ class SportsStoreDetailPage extends StatelessWidget {
               right: 30,
               top: size.height / 4,
               child: Hero(
-                tag: 'hero_ball_${ball.name}',
+                tag: 'hero_ball_${ball!.name}',
                 child: Image.asset(
-                  ball.image,
+                  ball!.image!,
                   height: MediaQuery.of(context).size.width / 2.2,
                 ),
               ),

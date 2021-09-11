@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 final backgroundColor = Color(0xFF191719);
 
 class Song {
-  final String title;
-  final String image;
+  final String? title;
+  final String? image;
 
   const Song({this.title, this.image});
 }
@@ -90,12 +90,12 @@ class Sample3 extends StatelessWidget {
                       final song = songs[index % songs.length];
                       return ListTile(
                         leading: Image.network(
-                          song.image,
+                          song.image!,
                           height: 30,
                           fit: BoxFit.cover,
                         ),
                         title: Text(
-                          song.title,
+                          song.title!,
                         ),
                         trailing: IconButton(
                           onPressed: () => null,
@@ -120,7 +120,7 @@ class Sample3 extends StatelessWidget {
 
 class AlbumWidget extends StatelessWidget {
   const AlbumWidget({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -166,7 +166,7 @@ class AlbumWidget extends StatelessWidget {
 
 class BottomWidget extends StatelessWidget {
   const BottomWidget({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -220,7 +220,7 @@ class BottomWidget extends StatelessWidget {
 
 class HeaderWidget extends StatelessWidget {
   const HeaderWidget({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -250,7 +250,7 @@ class HeaderWidget extends StatelessWidget {
                   children: [
                     Text(
                       'Avicii',
-                      style: Theme.of(context).textTheme.headline4.copyWith(
+                      style: Theme.of(context).textTheme.headline4!.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),

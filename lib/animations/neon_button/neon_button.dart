@@ -5,14 +5,14 @@ class NeonButton extends StatefulWidget {
   final Color color;
   final Color textActiveColor;
   final String text;
-  final Duration duration;
-  final VoidCallback onTap;
+  final Duration? duration;
+  final VoidCallback? onTap;
   final bool animateAfterChanges;
 
   const NeonButton({
-    Key key,
-    @required this.color,
-    @required this.text,
+    Key? key,
+    required this.color,
+    required this.text,
     this.duration,
     this.onTap,
     this.textActiveColor = Colors.black,
@@ -22,15 +22,16 @@ class NeonButton extends StatefulWidget {
   _NeonButtonState createState() => _NeonButtonState();
 }
 
-class _NeonButtonState extends State<NeonButton> with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+class _NeonButtonState extends State<NeonButton>
+    with SingleTickerProviderStateMixin {
+  AnimationController? _controller;
   final ValueNotifier<bool> _notifierCompleted = ValueNotifier(false);
 
   @override
   void didUpdateWidget(NeonButton oldWidget) {
     if (widget.animateAfterChanges) {
       _notifierCompleted.value = false;
-      _controller.forward(from: 0.0);
+      _controller!.forward(from: 0.0);
     }
     super.didUpdateWidget(oldWidget);
   }
@@ -45,8 +46,8 @@ class _NeonButtonState extends State<NeonButton> with SingleTickerProviderStateM
             milliseconds: 1200,
           ),
     );
-    _controller.forward();
-    _controller.addStatusListener(
+    _controller!.forward();
+    _controller!.addStatusListener(
       (status) {
         if (status == AnimationStatus.completed) {
           _notifierCompleted.value = true;
@@ -57,7 +58,7 @@ class _NeonButtonState extends State<NeonButton> with SingleTickerProviderStateM
 
   @override
   void dispose() {
-    _controller.dispose();
+    _controller!.dispose();
     super.dispose();
   }
 
@@ -96,10 +97,11 @@ class _NeonButtonState extends State<NeonButton> with SingleTickerProviderStateM
                     padding: const EdgeInsets.all(padding),
                     child: FittedBox(
                       child: Text(
-                        widget.text ?? '',
+                        widget.text,
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: completed ? widget.textActiveColor : widget.color,
+                          color:
+                              completed ? widget.textActiveColor : widget.color,
                         ),
                       ),
                     ),
@@ -115,8 +117,8 @@ class _NeonButtonState extends State<NeonButton> with SingleTickerProviderStateM
 }
 
 class _NeonLinePainter extends CustomPainter {
-  final Animation animation;
-  final Color color;
+  final Animation? animation;
+  final Color? color;
 
   _NeonLinePainter({
     this.animation,
@@ -127,13 +129,13 @@ class _NeonLinePainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final rect = Offset.zero & size;
     final Paint paint = Paint()..color = Colors.transparent;
-    final progress = animation.value;
+    final progress = animation!.value;
     if (progress > 0.0) {
       paint.color = Colors.black;
       paint.shader = SweepGradient(
         colors: [
           Colors.transparent,
-          color,
+          color!,
           Colors.transparent,
         ],
         stops: [

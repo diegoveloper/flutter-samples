@@ -86,11 +86,11 @@ class _TravelConceptPageState extends State<TravelConceptPage> {
 }
 
 class TravelItem extends StatefulWidget {
-  final bool itemSelected;
-  final LocationCard item;
+  final bool? itemSelected;
+  final LocationCard? item;
 
   const TravelItem({
-    Key key,
+    Key? key,
     this.itemSelected,
     this.item,
   }) : super(key: key);
@@ -126,7 +126,7 @@ class _TravelItemState extends State<TravelItem> {
   }
 
   void _onVerticalDrag(DragUpdateDetails details) {
-    if (details.primaryDelta > 3.0) {
+    if (details.primaryDelta! > 3.0) {
       setState(() {
         _selected = false;
       });
@@ -143,12 +143,12 @@ class _TravelItemState extends State<TravelItem> {
 
   @override
   Widget build(BuildContext context) {
-    if (!widget.itemSelected) {
+    if (!widget.itemSelected!) {
       _selected = false;
     }
     return LayoutBuilder(builder: (context, constraints) {
       final itemHeight =
-          constraints.maxHeight * (widget.itemSelected ? 0.55 : 0.52);
+          constraints.maxHeight * (widget.itemSelected! ? 0.55 : 0.52);
       final itemWidth = constraints.maxWidth * 0.82;
 
       final borderRadius = BorderRadius.circular(5.0);
@@ -258,9 +258,9 @@ class _TravelItemState extends State<TravelItem> {
                       children: [
                         Positioned.fill(
                           child: Hero(
-                            tag: widget.item.title,
+                            tag: widget.item!.title!,
                             child: Image.network(
-                              widget.item.imageUrl,
+                              widget.item!.imageUrl!,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -270,7 +270,7 @@ class _TravelItemState extends State<TravelItem> {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
-                              widget.item.title,
+                              widget.item!.title!,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
@@ -292,8 +292,8 @@ class _TravelItemState extends State<TravelItem> {
 }
 
 class LocationCard {
-  final String title;
-  final String imageUrl;
+  final String? title;
+  final String? imageUrl;
 
   LocationCard({this.title, this.imageUrl});
 }

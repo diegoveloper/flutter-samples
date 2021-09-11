@@ -7,28 +7,27 @@ import 'package:flutter/rendering.dart';
 import 'dart:ui' as ui;
 
 class HideMyWidget extends StatefulWidget {
-  final Widget child;
+  final Widget? child;
 
-  const HideMyWidget({Key key, this.child}) : super(key: key);
+  const HideMyWidget({Key? key, this.child}) : super(key: key);
 
   @override
   _HideMyWidgetState createState() => _HideMyWidgetState();
 }
 
-class _HideMyWidgetState extends State<HideMyWidget>
-    with SingleTickerProviderStateMixin {
+class _HideMyWidgetState extends State<HideMyWidget> with SingleTickerProviderStateMixin {
   bool _hide = false;
   final _key = GlobalKey();
-  AnimationController _animationController;
-  OverlayEntry _entry;
+  late AnimationController _animationController;
+  OverlayEntry? _entry;
 
   void _onTap() async {
-    RenderRepaintBoundary boundary = _key.currentContext.findRenderObject();
+    RenderRepaintBoundary boundary = _key.currentContext!.findRenderObject() as RenderRepaintBoundary;
     ui.Image image = await boundary.toImage();
-    ByteData byteData = await image.toByteData(format: ui.ImageByteFormat.png);
+    final byteData = (await image.toByteData(format: ui.ImageByteFormat.png) as ByteData);
     var pngBytes = byteData.buffer.asUint8List();
 
-    final renderBox = _key.currentContext.findRenderObject() as RenderBox;
+    final renderBox = _key.currentContext!.findRenderObject() as RenderBox;
     final position = renderBox.localToGlobal(Offset.zero);
 
     _entry?.remove();
@@ -45,15 +44,14 @@ class _HideMyWidgetState extends State<HideMyWidget>
           width: renderBox.size.width,
           height: renderBox.size.height,
           child: Transform(
-            transform: Matrix4.identity()
-              ..rotateZ(vector.radians(random * _animationController.value)),
+            transform: Matrix4.identity()..rotateZ(vector.radians(random * _animationController.value)),
             child: Image.memory(pngBytes),
           ),
         );
       },
     );
 
-    Overlay.of(context).insert(_entry);
+    Overlay.of(context)!.insert(_entry!);
     await Future.delayed(const Duration(milliseconds: 20));
     setState(() {
       _hide = true;
@@ -78,10 +76,10 @@ class _HideMyWidgetState extends State<HideMyWidget>
 
   void _animationListener() {
     if (_animationController.status == AnimationStatus.completed) {
-      _entry.remove();
+      _entry!.remove();
       _entry = null;
     } else {
-      _entry.markNeedsBuild();
+      _entry!.markNeedsBuild();
     }
   }
 

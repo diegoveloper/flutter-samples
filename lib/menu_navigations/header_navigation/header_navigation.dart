@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 class HeaderNavigationItem {
   final Color colorBackground;
   final Color colorForeground;
-  final Widget icon;
+  final Widget? icon;
   final String title;
-  final Widget child;
+  final Widget? child;
 
   HeaderNavigationItem(
       {this.colorBackground = Colors.blue,
       this.colorForeground = Colors.white,
       this.icon,
       this.child,
-      @required this.title});
+      required this.title});
 }
 
 class HeaderNavigation extends StatefulWidget {
@@ -20,8 +20,8 @@ class HeaderNavigation extends StatefulWidget {
   final Duration duration;
 
   const HeaderNavigation({
-    Key key,
-    @required this.items,
+    Key? key,
+    required this.items,
     this.duration = const Duration(
       milliseconds: 400,
     ),
@@ -53,10 +53,10 @@ class _HeaderNavigationState extends State<HeaderNavigation> {
 
   @override
   void initState() {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
       setState(() {
         _heightLayout =
-            (_keyLayout.currentContext.findRenderObject() as RenderBox)
+            (_keyLayout.currentContext!.findRenderObject() as RenderBox)
                 .size
                 .height;
       });
@@ -67,7 +67,7 @@ class _HeaderNavigationState extends State<HeaderNavigation> {
   @override
   Widget build(BuildContext context) {
     final count = widget.items.length;
-    final verticalItems = List<Widget>();
+    final verticalItems = <Widget>[];
     if (_heightLayout > 0) {
       final heightPerItem = _heightLayout / count;
       for (int i = count - 1; i >= 0; i--) {
@@ -173,7 +173,8 @@ class _HeaderNavigationState extends State<HeaderNavigation> {
             right: 0,
             child: IndexedStack(
               index: _currentIndex,
-              children: widget.items.map((item) => item.child).toList(),
+              children: widget.items.map((item) => item.child).toList()
+                  as List<Widget>,
             ),
           ),
           Stack(

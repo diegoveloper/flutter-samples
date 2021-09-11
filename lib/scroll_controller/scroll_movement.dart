@@ -6,18 +6,18 @@ class ScrollMovement extends StatefulWidget {
 }
 
 class _ScrollMovementState extends State<ScrollMovement> {
-  ScrollController _controller;
+  ScrollController? _controller;
   final itemSize = 100.0;
 
   _moveUp() {
     //_controller.jumpTo(_controller.offset - itemSize);
-    _controller.animateTo(_controller.offset - itemSize,
+    _controller!.animateTo(_controller!.offset - itemSize,
         curve: Curves.linear, duration: Duration(milliseconds: 500));
   }
 
   _moveDown() {
     //_controller.jumpTo(_controller.offset + itemSize);
-    _controller.animateTo(_controller.offset + itemSize,
+    _controller!.animateTo(_controller!.offset + itemSize,
         curve: Curves.linear, duration: Duration(milliseconds: 500));
   }
 
@@ -29,7 +29,7 @@ class _ScrollMovementState extends State<ScrollMovement> {
 
   @override
   void dispose() {
-    _controller.dispose();
+    _controller!.dispose();
     super.dispose();
   }
 

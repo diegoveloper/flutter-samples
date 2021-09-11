@@ -12,10 +12,10 @@ const leftItemSeparator = const SizedBox(
 );
 
 class Shoe {
-  final String name;
-  final String image;
-  final double price;
-  final Color color;
+  final String? name;
+  final String? image;
+  final double? price;
+  final Color? color;
 
   const Shoe({
     this.name,
@@ -151,10 +151,10 @@ class _ShoesStorePageState extends State<ShoesStorePage> {
                     Expanded(
                       child: Transform.rotate(
                           angle: vector.radians(18),
-                          child: Image.asset(shoe.image)),
+                          child: Image.asset(shoe.image!)),
                     ),
                     Text(
-                      shoe.name,
+                      shoe.name!,
                       style: TextStyle(fontSize: 12),
                     ),
                     Text(
@@ -277,13 +277,13 @@ class _ShoesStorePageState extends State<ShoesStorePage> {
       );
 
   void _listener() {
-    _pageNotifier.value = _pageController.page;
+    _pageNotifier.value = _pageController.page!;
     setState(() {});
   }
 
   @override
   void initState() {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
       _pageController.addListener(_listener);
     });
     super.initState();
@@ -358,11 +358,11 @@ class _ShoesStorePageState extends State<ShoesStorePage> {
                       itemCount: shoes.length,
                       itemBuilder: (context, index) {
                         final t = (index - _pageNotifier.value);
-                        final rotationY = lerpDouble(0, 90, t);
+                        final rotationY = lerpDouble(0, 90, t)!;
                         final translationX = lerpDouble(0, -50, t);
-                        final scale = lerpDouble(0, -0.2, t);
+                        final scale = lerpDouble(0, -0.2, t)!;
                         final translationXShoes = lerpDouble(0, 150, t);
-                        final rotationShoe = lerpDouble(0, -45, t);
+                        final rotationShoe = lerpDouble(0, -45, t)!;
                         final transform = Matrix4.identity();
                         transform.translate(translationX);
                         transform.setEntry(3, 2, 0.001);
@@ -391,7 +391,7 @@ class _ShoesStorePageState extends State<ShoesStorePage> {
                               ));
                             },
                             child: Stack(
-                              overflow: Overflow.visible,
+                              clipBehavior: Clip.none,
                               children: [
                                 Transform(
                                   alignment: Alignment.center,
@@ -427,7 +427,7 @@ class _ShoesStorePageState extends State<ShoesStorePage> {
                                               children: [
                                                 Text(
                                                   shoes[index]
-                                                      .name
+                                                      .name!
                                                       .split(' ')
                                                       .join('\n'),
                                                   style: TextStyle(
@@ -473,7 +473,7 @@ class _ShoesStorePageState extends State<ShoesStorePage> {
                                     child: Hero(
                                       tag: 'hero_image_${shoes[index].name}',
                                       child: Image.asset(
-                                        shoes[index].image,
+                                        shoes[index].image!,
                                         height: size.width / 2.5,
                                       ),
                                     ),

@@ -5,8 +5,8 @@ class DetailPage extends StatefulWidget {
   final Character character;
 
   const DetailPage({
-    Key key,
-    @required this.character,
+    Key? key,
+    required this.character,
   }) : super(key: key);
 
   @override
@@ -15,7 +15,7 @@ class DetailPage extends StatefulWidget {
 
 class _DetailPageState extends State<DetailPage>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {
@@ -38,15 +38,15 @@ class _DetailPageState extends State<DetailPage>
         Hero(
           tag: "background_${widget.character.title}",
           child: Container(
-            color: Color(widget.character.color),
+            color: Color(widget.character.color!),
           ),
         ),
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
-            backgroundColor: Color(widget.character.color),
+            backgroundColor: Color(widget.character.color!),
             elevation: 0,
-            title: Text(widget.character.title),
+            title: Text(widget.character.title!),
             leading: CloseButton(),
           ),
           body: SingleChildScrollView(
@@ -56,7 +56,7 @@ class _DetailPageState extends State<DetailPage>
                 Hero(
                   tag: "image_${widget.character.title}",
                   child: Image.asset(
-                    widget.character.avatar,
+                    widget.character.avatar!,
                     height: MediaQuery.of(context).size.height / 2,
                   ),
                 ),
@@ -65,13 +65,13 @@ class _DetailPageState extends State<DetailPage>
                   builder: (context, widget) => Transform.translate(
                     transformHitTests: false,
                     offset: Offset.lerp(
-                        Offset(0.0, 200.0), Offset.zero, _controller.value),
+                        Offset(0.0, 200.0), Offset.zero, _controller.value)!,
                     child: widget,
                   ),
                   child: Padding(
                     padding: EdgeInsets.all(10),
                     child: Text(
-                      widget.character.description,
+                      widget.character.description!,
                       style: TextStyle(
                         fontSize: 18,
                         color: Colors.white,

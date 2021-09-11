@@ -5,11 +5,11 @@ import 'album_image.dart';
 const _itemCounts = 20;
 
 class AlbumFlowDetailPage extends StatelessWidget {
-  final String image;
-  final double angle;
+  final String? image;
+  final double? angle;
 
   const AlbumFlowDetailPage({
-    Key key,
+    Key? key,
     this.image,
     this.angle,
   }) : super(key: key);
@@ -42,7 +42,8 @@ class AlbumFlowDetailPage extends StatelessWidget {
                   itemCount: _itemCounts,
                   itemBuilder: (context, index) {
                     return Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15.0, vertical: 5.0),
                       child: ListTile(
                         title: Text(
                           'Random Song ${index + 1}',

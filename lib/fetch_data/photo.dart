@@ -1,6 +1,6 @@
 class Photo {
-  final String title;
-  final String thumbnailUrl;
+  final String? title;
+  final String? thumbnailUrl;
 
   Photo._({this.title, this.thumbnailUrl});
 

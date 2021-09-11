@@ -29,14 +29,14 @@ class Sample2 extends StatelessWidget {
 class MySliverAppBar extends SliverPersistentHeaderDelegate {
   final double expandedHeight;
 
-  MySliverAppBar({@required this.expandedHeight});
+  MySliverAppBar({required this.expandedHeight});
 
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Stack(
+      clipBehavior: Clip.none,
       fit: StackFit.expand,
-      overflow: Overflow.visible,
       children: [
         Image.network(
           "https://images.pexels.com/photos/396547/pexels-photo-396547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",

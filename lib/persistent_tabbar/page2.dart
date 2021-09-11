@@ -10,7 +10,7 @@ class Page2 extends StatefulWidget {
 
 class _Page2State extends State<Page2>
     with AutomaticKeepAliveClientMixin<Page2> {
-  var list = List();
+  List<dynamic>? list = [];
 
   _loadList() async {
     final response = await http
@@ -19,7 +19,7 @@ class _Page2State extends State<Page2>
       await Future.delayed(const Duration(seconds: 1));
       if (mounted) {
         setState(() {
-          list = json.decode(response.body) as List;
+          list = json.decode(response.body) as List?;
         });
       }
     } else {
@@ -40,9 +40,9 @@ class _Page2State extends State<Page2>
       children: <Widget>[
         Expanded(
           child: ListView.builder(
-            itemCount: list.length,
+            itemCount: list!.length,
             itemBuilder: (BuildContext context, int index) {
-              final data = list[index];
+              final data = list![index];
               return ListTile(
                 contentPadding: EdgeInsets.all(10.0),
                 title: Text(data['title']),

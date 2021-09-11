@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_samples/app_clone/travel_concept/travel_concept_page.dart';
 
 class TravelConceptDetailPage extends StatelessWidget {
-  final LocationCard location;
+  final LocationCard? location;
 
-  const TravelConceptDetailPage({Key key, this.location}) : super(key: key);
+  const TravelConceptDetailPage({Key? key, this.location}) : super(key: key);
 
   void _onVerticalDrag(
     DragUpdateDetails details,
     BuildContext context,
   ) {
-    if (details.primaryDelta > 3.0) {
+    if (details.primaryDelta! > 3.0) {
       Navigator.of(context).pop();
     }
   }
@@ -25,9 +25,9 @@ class TravelConceptDetailPage extends StatelessWidget {
             onVerticalDragUpdate: (details) =>
                 _onVerticalDrag(details, context),
             child: Hero(
-              tag: location.title,
+              tag: location!.title!,
               child: Image.network(
-                location.imageUrl,
+                location!.imageUrl!,
                 fit: BoxFit.cover,
               ),
             ),

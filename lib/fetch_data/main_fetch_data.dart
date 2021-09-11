@@ -10,7 +10,7 @@ class MainFetchData extends StatefulWidget {
 }
 
 class _MainFetchDataState extends State<MainFetchData> {
-  List<Photo> list = List();
+  List<Photo> list = [];
   var isLoading = false;
 
   _fetchData() async {
@@ -53,9 +53,9 @@ class _MainFetchDataState extends State<MainFetchData> {
                 itemBuilder: (BuildContext context, int index) {
                   return ListTile(
                     contentPadding: EdgeInsets.all(10.0),
-                    title: Text(list[index].title),
+                    title: Text(list[index].title!),
                     trailing: Image.network(
-                      list[index].thumbnailUrl,
+                      list[index].thumbnailUrl!,
                       fit: BoxFit.cover,
                       height: 40.0,
                       width: 40.0,
