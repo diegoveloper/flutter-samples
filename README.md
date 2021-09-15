@@ -7,8 +7,6 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 
 
 
-<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/YouTube_Logo.svg/800px-YouTube_Logo.svg.png' width="250">
-
 ## Getting Started
 To build and run this project:
 
@@ -21,7 +19,11 @@ To build and run this project:
 
 
 
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/_yL6bHB6oPA/0.jpg)](http://www.youtube.com/watch?v=_yL6bHB6oPA "diegoveloper")
+
+
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/502px-Logo_of_YouTube_%282015-2017%29.svg.png' width="250">
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/bYqeGigTsBw/0.jpg)](http://www.youtube.com/watch?v=bYqeGigTsBw "diegoveloper")
 
 
 ## FLUTTER SAMPLES
