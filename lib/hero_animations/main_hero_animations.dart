@@ -121,7 +121,7 @@ class _MainHeroAnimationsPageState extends State<MainHeroAnimationsPage> {
               )),
         ),
         actions: <Widget>[
-          OutlineButton(
+          OutlinedButton(
             onPressed: () => Navigator.of(context).pop(),
             child: Icon(Icons.close),
           ),

@@ -39,7 +39,7 @@ class _MainFetchDataState extends State<MainFetchData> {
         ),
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: RaisedButton(
+          child: ElevatedButton(
             child: Text("Fetch Data"),
             onPressed: _fetchData,
           ),

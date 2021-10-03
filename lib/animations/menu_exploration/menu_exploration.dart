@@ -18,7 +18,7 @@ class MenuExploration extends StatefulWidget {
     this.height,
     this.onChanged,
     this.selectedValue,
-  })  : assert(options != null && options.isNotEmpty),
+  })  : assert(options.isNotEmpty),
         super(key: key);
 
   @override

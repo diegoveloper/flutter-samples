@@ -30,21 +30,21 @@ class Child1PageState extends State<Child1Page> {
             widget.title ?? value,
             style: Theme.of(context).primaryTextTheme.headline5,
           ),
-          RaisedButton(
+          ElevatedButton(
             //Update Parent from Child 1
             child: Text("Action 2"),
             onPressed: () {
               widget.child2Action2!("Update from Child 1");
             },
           ),
-          RaisedButton(
+          ElevatedButton(
             //Update Child 2 from Child 1
             child: Text("Action 3"),
             onPressed: () {
               widget.child2Action3!("Update from Child 1");
             },
           ),
-          RaisedButton(
+          ElevatedButton(
             //Change Tab from Child 1 to Child 2
             child: Text("Action 4"),
             onPressed: () {

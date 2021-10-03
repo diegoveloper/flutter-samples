@@ -305,7 +305,7 @@ class _SportsStorePageState extends State<SportsStorePage> {
                                 child: Row(
                                   children: [
                                     Expanded(
-                                      child: OutlineButton(
+                                      child: OutlinedButton(
                                         onPressed: null,
                                         child: Text(
                                           '3',
@@ -317,7 +317,7 @@ class _SportsStorePageState extends State<SportsStorePage> {
                                       width: 10,
                                     ),
                                     Expanded(
-                                      child: OutlineButton(
+                                      child: OutlinedButton(
                                         onPressed: null,
                                         child: Text(
                                           '4',
@@ -329,7 +329,7 @@ class _SportsStorePageState extends State<SportsStorePage> {
                                       width: 10,
                                     ),
                                     Expanded(
-                                      child: OutlineButton(
+                                      child: OutlinedButton(
                                         onPressed: null,
                                         child: Text(
                                           '5',

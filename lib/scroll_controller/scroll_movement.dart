@@ -48,11 +48,11 @@ class _ScrollMovementState extends State<ScrollMovement> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  RaisedButton(
+                  ElevatedButton(
                     child: Text("up"),
                     onPressed: _moveUp,
                   ),
-                  RaisedButton(
+                  ElevatedButton(
                     child: Text("down"),
                     onPressed: _moveDown,
                   )

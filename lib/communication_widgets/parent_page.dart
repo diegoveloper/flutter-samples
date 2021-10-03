@@ -74,7 +74,7 @@ class ParentPageState extends State<ParentPage>
               textAlign: TextAlign.center,
             ),
           ),
-          RaisedButton(
+          ElevatedButton(
             //Update Child 1 from Parent
             child: Text("Action 1"),
             onPressed: () {

@@ -184,8 +184,10 @@ class _MoviesConceptPageState extends State<MoviesConceptPage> {
             left: size.width / 4,
             bottom: 20,
             width: size.width / 2,
-            child: RaisedButton(
-                color: Colors.black,
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.black,
+                ),
                 child: Text(
                   'BUY TICKET',
                   style: TextStyle(color: Colors.white),
