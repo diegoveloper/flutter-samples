@@ -216,10 +216,12 @@ class _PhotoConceptPageState extends State<PhotoConceptPage> {
                     duration: duration),
                 Padding(
                   padding: const EdgeInsets.all(12.0),
-                  child: RaisedButton(
-                    color: Colors.redAccent,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.redAccent,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
                     ),
                     onPressed: () {},
                     child: Padding(

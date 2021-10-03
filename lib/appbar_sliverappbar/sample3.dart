@@ -147,13 +147,16 @@ class AlbumWidget extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  RaisedButton(
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.pinkAccent,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25),
                       ),
-                      color: Colors.pinkAccent,
-                      child: Text('ADD TO PLAYLIST'),
-                      onPressed: () => null)
+                    ),
+                    child: Text('ADD TO PLAYLIST'),
+                    onPressed: () => null,
+                  )
                 ],
               ),
             ),
