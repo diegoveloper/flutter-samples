@@ -1,8 +1,8 @@
 class Character {
-  final String avatar;
-  final String title;
-  final String description;
-  final int color;
+  final String? avatar;
+  final String? title;
+  final String? description;
+  final int? color;
 
   Character({
     this.avatar,

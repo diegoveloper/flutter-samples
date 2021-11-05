@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_samples/animations/main_animations.dart';
 import 'package:flutter_samples/app_clone/main_apps_clone.dart';
 import 'package:flutter_samples/appbar_sliverappbar/main_appbar_sliverappbar.dart';
@@ -35,6 +36,7 @@ class MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
     return Scaffold(
       appBar: AppBar(
         title: Text("Flutter Samples"),
@@ -140,8 +142,8 @@ class MyAppState extends State<MyApp> {
 }
 
 class MyMenuButton extends StatelessWidget {
-  final String title;
-  final VoidCallback actionTap;
+  final String? title;
+  final VoidCallback? actionTap;
 
   MyMenuButton({this.title, this.actionTap});
 
@@ -153,7 +155,7 @@ class MyMenuButton extends StatelessWidget {
         height: 50.0,
         color: Theme.of(context).primaryColor,
         textColor: Colors.white,
-        child: new Text(title),
+        child: new Text(title!),
         onPressed: actionTap,
       ),
     );

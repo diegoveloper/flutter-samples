@@ -1,5 +1,5 @@
 class Album {
-  final String image;
+  final String? image;
 
   const Album._(this.image);
 

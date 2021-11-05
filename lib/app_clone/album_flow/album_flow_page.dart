@@ -44,7 +44,7 @@ class _AlbumFlowPageState extends State<AlbumFlowPage> {
     return result;
   }
 
-  void _onTapAlbum(String image, double angle) {
+  void _onTapAlbum(String? image, double angle) {
     final page = AlbumFlowDetailPage(image: image, angle: angle);
     Navigator.of(context).push(
       PageRouteBuilder<Null>(
@@ -94,14 +94,14 @@ class _AlbumFlowPageState extends State<AlbumFlowPage> {
                                 padding: const EdgeInsets.only(
                                     top: 100, left: 25, right: 25),
                                 controller: _pageController,
-                                itemCount: snapshot.data.length,
+                                itemCount: snapshot.data!.length,
                                 itemBuilder: (context, index) {
                                   final t =
                                       (index * itemHeight * itemFactor - value)
                                               .abs() /
                                           numberOfElements;
                                   final rotationY =
-                                      lerpDouble(0.0, 5, t) - 360.0;
+                                      lerpDouble(0.0, 5, t)! - 360.0;
                                   return Align(
                                     alignment: Alignment.center,
                                     heightFactor: itemFactor,
@@ -113,7 +113,7 @@ class _AlbumFlowPageState extends State<AlbumFlowPage> {
                                       child: InkWell(
                                         onTap: () {
                                           _onTapAlbum(
-                                              snapshot.data[index].image,
+                                              snapshot.data![index].image,
                                               rotationY);
                                         },
                                         child: SizedBox(
@@ -124,7 +124,7 @@ class _AlbumFlowPageState extends State<AlbumFlowPage> {
                                               Positioned.fill(
                                                 child: AlbumImage(
                                                   image: snapshot
-                                                      .data[index].image,
+                                                      .data![index].image,
                                                   angle: rotationY,
                                                 ),
                                               ),

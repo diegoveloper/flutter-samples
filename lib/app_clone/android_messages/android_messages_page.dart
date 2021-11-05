@@ -32,7 +32,7 @@ class _AndroidMessagesPageState extends State<AndroidMessagesPage> {
           body: NotificationListener<ScrollNotification>(
               onNotification: (onScrollNotification) {
                 if (onScrollNotification is ScrollUpdateNotification) {
-                  if (onScrollNotification.scrollDelta <= 0.0) {
+                  if (onScrollNotification.scrollDelta! <= 0.0) {
                     if (!isGoingDown) setState(() => isGoingDown = true);
                   } else {
                     if (isGoingDown) setState(() => isGoingDown = false);
@@ -104,8 +104,8 @@ class MyFabButton extends StatelessWidget {
 }
 
 class SMSItem extends StatelessWidget {
-  final String number;
-  final String text;
+  final String? number;
+  final String? text;
 
   SMSItem({this.number, this.text});
 
@@ -126,12 +126,12 @@ class SMSItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    number,
+                    number!,
                     textAlign: TextAlign.left,
                     style: TextStyle(fontSize: 17.0),
                   ),
                   Text(
-                    text,
+                    text!,
                     textAlign: TextAlign.left,
                     style: TextStyle(fontSize: 15.0, color: Colors.grey),
                   )

@@ -3,8 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class Movie {
-  final String url;
-  final String title;
+  final String? url;
+  final String? title;
 
   const Movie({this.url, this.title});
 }
@@ -34,7 +34,7 @@ class MoviesConceptPage extends StatefulWidget {
 
 class _MoviesConceptPageState extends State<MoviesConceptPage> {
   final pageController = PageController(viewportFraction: 0.7);
-  final ValueNotifier<double> _pageNotifier = ValueNotifier(0.0);
+  final ValueNotifier<double?> _pageNotifier = ValueNotifier(0.0);
 
   void _listener() {
     _pageNotifier.value = pageController.page;
@@ -43,7 +43,7 @@ class _MoviesConceptPageState extends State<MoviesConceptPage> {
 
   @override
   void initState() {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
       pageController.addListener(_listener);
     });
     super.initState();
@@ -65,7 +65,7 @@ class _MoviesConceptPageState extends State<MoviesConceptPage> {
       body: Stack(
         children: [
           Positioned.fill(
-            child: ValueListenableBuilder<double>(
+            child: ValueListenableBuilder<double?>(
                 valueListenable: _pageNotifier,
                 builder: (context, value, child) {
                   return Stack(
@@ -82,7 +82,7 @@ class _MoviesConceptPageState extends State<MoviesConceptPage> {
                                 index: entry.key,
                               ),
                               child: Image.network(
-                                entry.value.url,
+                                entry.value.url!,
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -117,10 +117,10 @@ class _MoviesConceptPageState extends State<MoviesConceptPage> {
               controller: pageController,
               itemBuilder: (context, index) {
                 final lerp =
-                    lerpDouble(0, 1, (index - _pageNotifier.value).abs());
+                    lerpDouble(0, 1, (index - _pageNotifier.value!).abs())!;
 
                 double opacity =
-                    lerpDouble(0.0, 0.5, (index - _pageNotifier.value).abs());
+                    lerpDouble(0.0, 0.5, (index - _pageNotifier.value!).abs())!;
                 if (opacity > 1.0) opacity = 1.0;
                 if (opacity < 0.0) opacity = 0.0;
                 return Transform.translate(
@@ -152,7 +152,7 @@ class _MoviesConceptPageState extends State<MoviesConceptPage> {
                                   child: ClipRRect(
                                     borderRadius: borderRadius,
                                     child: Image.network(
-                                      movies[index].url,
+                                      movies[index].url!,
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -162,7 +162,7 @@ class _MoviesConceptPageState extends State<MoviesConceptPage> {
                                 child: Padding(
                                   padding: const EdgeInsets.all(15.0),
                                   child: Text(
-                                    movies[index].title,
+                                    movies[index].title!,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w700,
@@ -184,8 +184,10 @@ class _MoviesConceptPageState extends State<MoviesConceptPage> {
             left: size.width / 4,
             bottom: 20,
             width: size.width / 2,
-            child: RaisedButton(
-                color: Colors.black,
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.black,
+                ),
                 child: Text(
                   'BUY TICKET',
                   style: TextStyle(color: Colors.white),
@@ -217,9 +219,9 @@ class _MoviesConceptPageState extends State<MoviesConceptPage> {
 }
 
 class MyClipper extends CustomClipper<Rect> {
-  final double percentage;
-  final String title;
-  final int index;
+  final double? percentage;
+  final String? title;
+  final int? index;
 
   MyClipper({
     this.percentage = 0.0,
@@ -229,13 +231,13 @@ class MyClipper extends CustomClipper<Rect> {
 
   @override
   Rect getClip(Size size) {
-    int currentIndex = movies.length - 1 - index;
-    final realPercent = (currentIndex - percentage).abs();
-    if (currentIndex == percentage.truncate()) {
+    int currentIndex = movies.length - 1 - index!;
+    final realPercent = (currentIndex - percentage!).abs();
+    if (currentIndex == percentage!.truncate()) {
       return Rect.fromLTWH(
           0.0, 0.0, size.width * (1 - realPercent), size.height);
     }
-    if (percentage.truncate() > currentIndex) {
+    if (percentage!.truncate() > currentIndex) {
       return Rect.fromLTWH(0.0, 0.0, 0.0, size.height);
     }
     return Rect.fromLTWH(0.0, 0.0, size.width, size.height);

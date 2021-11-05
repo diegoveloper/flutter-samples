@@ -25,8 +25,8 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool defaultAppBar;
 
   const MyCustomAppBar({
-    Key key,
-    @required this.height,
+    Key? key,
+    required this.height,
     this.defaultAppBar = true,
   }) : super(key: key);
 

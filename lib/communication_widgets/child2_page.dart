@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_samples/communication_widgets/parent_page.dart';
 
 class Child2Page extends StatefulWidget {
-  final String title;
+  final String? title;
 
   const Child2Page({
-    Key key,
+    Key? key,
     this.title,
   }) : super(key: key);
 
@@ -18,7 +18,7 @@ class Child2PageState extends State<Child2Page> {
 
   @override
   Widget build(BuildContext context) {
-    final title = ParentProvider.of(context).title;
+    final title = ParentProvider.of(context)!.title;
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: Column(

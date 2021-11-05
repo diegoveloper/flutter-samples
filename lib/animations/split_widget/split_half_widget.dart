@@ -4,8 +4,8 @@ class SplitHalfWidget extends StatefulWidget {
   final Widget child;
 
   const SplitHalfWidget({
-    Key key,
-    @required this.child,
+    Key? key,
+    required this.child,
   }) : super(key: key);
 
   @override
@@ -14,9 +14,9 @@ class SplitHalfWidget extends StatefulWidget {
 
 class _SplitHalfWidgetState extends State<SplitHalfWidget>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation<double> _animation;
-  double _childWidth;
+  late AnimationController _controller;
+  late Animation<double> _animation;
+  double? _childWidth;
   GlobalKey _childKey = GlobalKey();
 
   Widget _buildSide({bool left = true}) {
@@ -39,7 +39,7 @@ class _SplitHalfWidgetState extends State<SplitHalfWidget>
   }
 
   void _onLayoutDone(_) {
-    _childWidth = _childKey.currentContext.size.width / 2;
+    _childWidth = _childKey.currentContext!.size!.width / 2;
     _animation = Tween<double>(
       begin: _childWidth,
       end: 0.0,
@@ -59,7 +59,7 @@ class _SplitHalfWidgetState extends State<SplitHalfWidget>
       duration: Duration(seconds: 1),
     );
 
-    WidgetsBinding.instance.addPostFrameCallback(_onLayoutDone);
+    WidgetsBinding.instance!.addPostFrameCallback(_onLayoutDone);
     super.initState();
   }
 

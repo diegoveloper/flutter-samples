@@ -2,17 +2,20 @@ name: flutter_samples
 description: A new Flutter project.
 version: 1.0.0
 environment:
-  sdk: ">=2.6.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 dependencies:
   flutter:
     sdk: flutter
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.2
+  cupertino_icons: ^1.0.3
   http: any
-  circle_wheel_scroll: ^0.0.1+1
-  cached_network_image: ^2.0.0
+  circle_wheel_scroll:
+    git: 
+      url: https://github.com/KolasikOmetov/circle_wheel_scroll
+      ref: null_safety_and_endless_scrolling
+  cached_network_image: ^3.1.0
 
 dev_dependencies:
   flutter_test:

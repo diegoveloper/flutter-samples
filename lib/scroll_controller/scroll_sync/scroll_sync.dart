@@ -64,7 +64,7 @@ class _ScrollSyncState extends State<ScrollSync> {
                     "$index",
                     style: Theme.of(context)
                         .textTheme
-                        .headline3
+                        .headline3!
                         .copyWith(color: Colors.white),
                   ),
                 ),
@@ -91,7 +91,7 @@ class CustomScrollController extends ScrollController {
   _SilentScrollPosition createScrollPosition(
     ScrollPhysics physics,
     ScrollContext context,
-    ScrollPosition oldPosition,
+    ScrollPosition? oldPosition,
   ) {
     return _SilentScrollPosition(
       physics: physics,
@@ -104,17 +104,18 @@ class CustomScrollController extends ScrollController {
   void jumpToWithoutGoingIdleAndKeepingBallistic(double value) {
     assert(positions.isNotEmpty, 'ScrollController not attached.');
     for (_SilentScrollPosition position
-        in new List<ScrollPosition>.from(positions))
+        in new List<ScrollPosition>.from(positions)
+            as Iterable<_SilentScrollPosition>)
       position.jumpToWithoutGoingIdleAndKeepingBallistic(value);
   }
 }
 
 class _SilentScrollPosition extends ScrollPositionWithSingleContext {
   _SilentScrollPosition({
-    ScrollPhysics physics,
-    ScrollContext context,
-    ScrollPosition oldPosition,
-    double initialPixels,
+    required ScrollPhysics physics,
+    required ScrollContext context,
+    ScrollPosition? oldPosition,
+    double? initialPixels,
   }) : super(
           physics: physics,
           context: context,

@@ -20,7 +20,7 @@ class Page1 extends StatelessWidget {
                 ),
               ),
             ),
-            OutlineButton(
+            OutlinedButton(
               onPressed: () => Navigator.of(context).pop(),
               child: Icon(Icons.close),
             )

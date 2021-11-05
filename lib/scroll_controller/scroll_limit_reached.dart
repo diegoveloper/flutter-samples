@@ -6,18 +6,18 @@ class ScrollLimitReached extends StatefulWidget {
 }
 
 class _ScrollLimitReachedState extends State<ScrollLimitReached> {
-  ScrollController _controller;
+  ScrollController? _controller;
   String message = "";
 
   _scrollListener() {
-    if (_controller.offset >= _controller.position.maxScrollExtent &&
-        !_controller.position.outOfRange) {
+    if (_controller!.offset >= _controller!.position.maxScrollExtent &&
+        !_controller!.position.outOfRange) {
       setState(() {
         message = "reach the bottom";
       });
     }
-    if (_controller.offset <= _controller.position.minScrollExtent &&
-        !_controller.position.outOfRange) {
+    if (_controller!.offset <= _controller!.position.minScrollExtent &&
+        !_controller!.position.outOfRange) {
       setState(() {
         message = "reach the top";
       });
@@ -27,14 +27,14 @@ class _ScrollLimitReachedState extends State<ScrollLimitReached> {
   @override
   void initState() {
     _controller = ScrollController();
-    _controller.addListener(_scrollListener);
+    _controller!.addListener(_scrollListener);
     super.initState();
   }
 
   @override
   void dispose() {
-    _controller.removeListener(_scrollListener);
-    _controller.dispose();
+    _controller!.removeListener(_scrollListener);
+    _controller!.dispose();
     super.dispose();
   }
 

@@ -5,12 +5,12 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_samples/app_clone/credit_cards_concept/credit_card.dart';
 
 class CreditCardWidget extends StatefulWidget {
-  final CreditCard card;
+  final CreditCard? card;
   final bool isDetail;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
 
   const CreditCardWidget({
-    Key key,
+    Key? key,
     this.card,
     this.isDetail = false,
     this.onTap,
@@ -24,7 +24,7 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
     with SingleTickerProviderStateMixin {
   Offset _currentDraggingOffset = Offset.zero;
   double _lastOffsetDy = 0.0;
-  AnimationController _animationController;
+  late AnimationController _animationController;
 
   void _onDragEnd(DragEndDetails details) {
     _lastOffsetDy = _currentDraggingOffset.dy;
@@ -43,7 +43,7 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
   }
 
   void _onDragUpdate(DragUpdateDetails details) {
-    _lastOffsetDy += details.primaryDelta;
+    _lastOffsetDy += details.primaryDelta!;
     if (_lastOffsetDy < -180) {
       _lastOffsetDy = -180.0;
     }
@@ -73,7 +73,7 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
     final rotationRequired = !widget.isDetail;
     timeDilation = 1.0;
     return Hero(
-      tag: widget.card.number,
+      tag: widget.card!.number!,
       flightShuttleBuilder: (
         _,
         Animation<double> animation,
@@ -81,15 +81,15 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
         BuildContext fromHeroContext,
         BuildContext toHeroContext,
       ) {
-        final Hero toHero = toHeroContext.widget;
-        final Hero fromHero = toHeroContext.widget;
+        final Hero toHero = toHeroContext.widget as Hero;
+        final Hero fromHero = toHeroContext.widget as Hero;
         return AnimatedBuilder(
           animation: animation,
           child: flightDirection == HeroFlightDirection.push
               ? fromHero.child
               : toHero.child,
           builder: (context, child) {
-            double rotateZ = 0.0;
+            double? rotateZ = 0.0;
             final t = Curves.slowMiddle.transform(animation.value);
             if (flightDirection == HeroFlightDirection.push) {
               rotateZ = lerpDouble(-90, 0, t);
@@ -98,7 +98,8 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
             }
             return Transform(
               alignment: FractionalOffset.center,
-              transform: Matrix4.identity()..rotateZ((math.pi / 180) * rotateZ),
+              transform: Matrix4.identity()
+                ..rotateZ((math.pi / 180) * rotateZ!),
               child: child,
             );
           },
@@ -144,7 +145,7 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
                               1.0,
                             ],
                             colors: [
-                              widget.card.color,
+                              widget.card!.color!,
                               Colors.grey,
                             ],
                           ),
@@ -201,13 +202,13 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
                                                 tween: IntTween(
                                                     begin: 0,
                                                     end: widget
-                                                        .card.number.length),
+                                                        .card!.number!.length),
                                                 duration: const Duration(
                                                     milliseconds: 800),
                                                 builder:
                                                     (context, snapshot, _) {
                                                   return Text(
-                                                    widget.card.number
+                                                    widget.card!.number!
                                                         .substring(0, snapshot),
                                                     maxLines: 1,
                                                     textAlign: TextAlign.end,
@@ -291,7 +292,7 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(
                                 constraints.maxWidth * 0.05),
-                            color: widget.card.color,
+                            color: widget.card!.color,
                           ),
                           child: Column(
                             children: [
@@ -318,7 +319,7 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
                                             color: Colors.white,
                                             padding: const EdgeInsets.all(5.0),
                                             child: Text(
-                                              widget.card.ccv,
+                                              widget.card!.ccv!,
                                               textAlign: TextAlign.end,
                                               style: TextStyle(
                                                 color: Colors.black,

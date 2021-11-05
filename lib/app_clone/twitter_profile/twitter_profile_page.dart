@@ -289,9 +289,9 @@ class Tweet extends StatelessWidget {
 }
 
 class MyAvatar extends StatelessWidget {
-  final double size;
+  final double? size;
 
-  const MyAvatar({Key key, this.size}) : super(key: key);
+  const MyAvatar({Key? key, this.size}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -300,7 +300,7 @@ class MyAvatar extends StatelessWidget {
       child: DecoratedBox(
         decoration: BoxDecoration(
             border: Border.all(
-              color: Colors.grey[800],
+              color: Colors.grey[800]!,
               width: 2.0,
             ),
             shape: BoxShape.circle),

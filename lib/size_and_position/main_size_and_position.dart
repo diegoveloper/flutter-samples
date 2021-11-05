@@ -11,15 +11,16 @@ class _MainSizeAndPositionState extends State<MainSizeAndPosition> {
   GlobalKey _keyGreen = GlobalKey();
 
   _getSizes() {
-    final RenderBox renderBoxRed = _keyRed.currentContext.findRenderObject();
+    final RenderBox renderBoxRed =
+        _keyRed.currentContext!.findRenderObject() as RenderBox;
     final sizeRed = renderBoxRed.size;
 
     final RenderBox renderBoxPurple =
-        _keyPurple.currentContext.findRenderObject();
+        _keyPurple.currentContext!.findRenderObject() as RenderBox;
     final sizePurple = renderBoxPurple.size;
 
     final RenderBox renderBoxGreen =
-        _keyGreen.currentContext.findRenderObject();
+        _keyGreen.currentContext!.findRenderObject() as RenderBox;
     final sizeGreen = renderBoxGreen.size;
 
     print("SIZE of Red: $sizeRed");
@@ -28,15 +29,16 @@ class _MainSizeAndPositionState extends State<MainSizeAndPosition> {
   }
 
   _getPositions() {
-    final RenderBox renderBoxRed = _keyRed.currentContext.findRenderObject();
+    final RenderBox renderBoxRed =
+        _keyRed.currentContext!.findRenderObject() as RenderBox;
     final positionRed = renderBoxRed.localToGlobal(Offset.zero);
 
     final RenderBox renderBoxPurple =
-        _keyPurple.currentContext.findRenderObject();
+        _keyPurple.currentContext!.findRenderObject() as RenderBox;
     final positionPurple = renderBoxPurple.localToGlobal(Offset.zero);
 
     final RenderBox renderBoxGreen =
-        _keyGreen.currentContext.findRenderObject();
+        _keyGreen.currentContext!.findRenderObject() as RenderBox;
     final positionGreen = renderBoxGreen.localToGlobal(Offset.zero);
 
     print("POSITION of Red: $positionRed ");
@@ -51,7 +53,7 @@ class _MainSizeAndPositionState extends State<MainSizeAndPosition> {
 
   @override
   void initState() {
-    WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
+    WidgetsBinding.instance!.addPostFrameCallback(_afterLayout);
     super.initState();
   }
 

@@ -85,10 +85,10 @@ class _PhotoConceptPageState extends State<PhotoConceptPage> {
 
   @override
   void initState() {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
       setState(() {
         _heightStack =
-            (_keyStack.currentContext.findRenderObject() as RenderBox)
+            (_keyStack.currentContext!.findRenderObject() as RenderBox)
                 .size
                 .height;
         _heightBackGround = (_heightStack / 2) + kToolbarHeight;
@@ -216,10 +216,12 @@ class _PhotoConceptPageState extends State<PhotoConceptPage> {
                     duration: duration),
                 Padding(
                   padding: const EdgeInsets.all(12.0),
-                  child: RaisedButton(
-                    color: Colors.redAccent,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.redAccent,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
                     ),
                     onPressed: () {},
                     child: Padding(

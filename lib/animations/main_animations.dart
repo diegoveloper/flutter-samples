@@ -4,6 +4,7 @@ import 'package:flutter_samples/animations/custom_appbar/my_custom_appbar_page.d
 import 'package:flutter_samples/animations/foldable/foldable_animation.dart';
 import 'package:flutter_samples/animations/list_details/list_page.dart';
 import 'package:flutter_samples/animations/menu_exploration/main_menu_exploration.dart';
+import 'package:flutter_samples/animations/neon_button/neon_button_main.dart';
 import 'package:flutter_samples/animations/split_widget/main_split_widget.dart';
 import 'package:flutter_samples/animations/turn_on_the_light/turn_on_the_light.dart';
 import 'package:flutter_samples/main.dart';
@@ -93,6 +94,12 @@ class MainAnimationsState extends State<MainAnimations> {
               title: "Shrink Top List",
               actionTap: () {
                 onButtonTap(ShrinkTopListPage());
+              },
+            ),
+            MyMenuButton(
+              title: "Neon Buttons",
+              actionTap: () {
+                onButtonTap(NeonButonMain());
               },
             ),
           ],

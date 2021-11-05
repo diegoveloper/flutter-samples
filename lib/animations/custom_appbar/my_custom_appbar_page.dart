@@ -35,7 +35,7 @@ class CustomSliverDelegate extends SliverPersistentHeaderDelegate {
   final String description;
 
   CustomSliverDelegate({
-    @required this.expandedHeight,
+    required this.expandedHeight,
     this.hideTitleWhenExpanded = true,
     this.title = "",
     this.description = "",

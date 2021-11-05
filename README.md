@@ -5,6 +5,29 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 <a href='https://www.buymeacoffee.com/diegoveloper' target="_blank" rel="noopener noreferrer"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"/></a>
 
 
+
+
+## Getting Started
+To build and run this project:
+
+1. Get Flutter [here](https://flutter.dev) if you don't already have it
+2. Clone this repository.
+3. `cd` into the repo folder.
+4. run `flutter run-android` or `flutter run-ios` to build the app.
+
+(Please note that a Mac with XCode is required to build for iOS)
+
+
+
+
+
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/502px-Logo_of_YouTube_%282015-2017%29.svg.png' width="250">
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/bYqeGigTsBw/0.jpg)](http://www.youtube.com/watch?v=bYqeGigTsBw "diegoveloper")
+
+
+## FLUTTER SAMPLES
+
  
  | [**Hello Flutter**](https://medium.com/@diegoveloper/hello-flutter-eb49e9b27916)      | [**Splash screen in Flutter**](https://medium.com/@diegoveloper/flutter-splash-screen-9f4e05542548)     | 
 |------------|-------------| 
@@ -65,6 +88,6 @@ You can follow me on twitter [@diegoveloper](https://www.twitter.com/diegovelope
 |--|--|
 | <center> <img src="https://media.giphy.com/media/QuIvsrhjCr4oPS49qa/giphy.gif" width="250"/> </center> | <center> <img src="https://media.giphy.com/media/gF30YeWCn0Ncf0qxCS/giphy.gif" width="250"/>
 
-   | [Animations / Shrink Top List](https://www.youtube.com/watch?v=becUP_s-KfU) |   |
+   | [Animations / Shrink Top List](https://www.youtube.com/watch?v=becUP_s-KfU) | Animations / Neon Button |
 |--|--|
-| <center> <img src="https://media.giphy.com/media/XFproCCYQ9eDR416g1/giphy.gif" width="250"/> </center> | <center> </center>
+| <center> <img src="https://media.giphy.com/media/XFproCCYQ9eDR416g1/giphy.gif" width="250"/> </center> | <center><img src="https://media.giphy.com/media/L1W2zwjOZAbVadQU56/giphy.gif" width="250"/> </center>

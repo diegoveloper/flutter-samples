@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class PhotoDetailPage extends StatelessWidget {
-  final String image;
-  final String tag;
+  final String? image;
+  final String? tag;
 
-  const PhotoDetailPage({Key key, this.image, this.tag}) : super(key: key);
+  const PhotoDetailPage({Key? key, this.image, this.tag}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +25,9 @@ class PhotoDetailPage extends StatelessWidget {
             ),
             Center(
               child: Hero(
-                tag: tag,
+                tag: tag!,
                 child: Image.network(
-                  image,
+                  image!,
                   fit: BoxFit.cover,
                 ),
               ),

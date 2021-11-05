@@ -5,9 +5,9 @@ import 'package:flutter_samples/app_clone/credit_cards_concept/credit_card.dart'
 import 'package:flutter_samples/app_clone/credit_cards_concept/credit_card_widget.dart';
 
 class CreditCardsConceptDetailPage extends StatelessWidget {
-  final CreditCard card;
+  final CreditCard? card;
 
-  const CreditCardsConceptDetailPage({Key key, this.card}) : super(key: key);
+  const CreditCardsConceptDetailPage({Key? key, this.card}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class CreditCardsConceptDetailPage extends StatelessWidget {
                           Text(
                             'Full card',
                             textAlign: TextAlign.center,
-                            style: textTheme.headline6.copyWith(
+                            style: textTheme.headline6!.copyWith(
                               color: Colors.white,
                             ),
                           ),
@@ -46,7 +46,7 @@ class CreditCardsConceptDetailPage extends StatelessWidget {
                           Text(
                             'Rotable the card to view the security code',
                             textAlign: TextAlign.center,
-                            style: textTheme.subtitle2.copyWith(
+                            style: textTheme.subtitle2!.copyWith(
                               color: Colors.grey[400],
                             ),
                           ),
@@ -66,7 +66,7 @@ class CreditCardsConceptDetailPage extends StatelessWidget {
                         child: Text(
                           'Today',
                           textAlign: TextAlign.left,
-                          style: textTheme.headline6.copyWith(
+                          style: textTheme.headline6!.copyWith(
                             color: Colors.white,
                           ),
                         ),
@@ -94,7 +94,7 @@ class CreditCardsConceptDetailPage extends StatelessWidget {
 }
 
 class MyCardHeaderDelegate extends SliverPersistentHeaderDelegate {
-  final CreditCard card;
+  final CreditCard? card;
   final double height;
 
   MyCardHeaderDelegate(
@@ -138,27 +138,27 @@ const categories = ['Shoes', 'Food', 'Restaurant', 'Hotel'];
 final random = Random();
 
 class MovementWidget extends StatelessWidget {
-  final int index;
+  final int? index;
 
-  const MovementWidget({Key key, this.index}) : super(key: key);
+  const MovementWidget({Key? key, this.index}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(
-        "Movement ${index + 1}",
+        "Movement ${index! + 1}",
         style: TextStyle(
           fontWeight: FontWeight.bold,
         ),
       ),
       subtitle: Text(
-        categories[index % categories.length],
+        categories[index! % categories.length],
         style: TextStyle(
           color: Colors.grey,
         ),
       ),
       leading: CircleAvatar(
-        backgroundColor: Colors.primaries[index % Colors.primaries.length],
+        backgroundColor: Colors.primaries[index! % Colors.primaries.length],
       ),
       trailing: Text(
         doubleInRange(random, 1, 5000).toStringAsFixed(2),

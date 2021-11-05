@@ -9,15 +9,15 @@ class MainSplitImage extends StatefulWidget {
 }
 
 class _MainSplitImageState extends State<MainSplitImage> {
-  ui.Image _image;
+  ui.Image? _image;
   double _x = 0, _y = 0, _width = 0, _height = 0;
 
   _loadImage() async {
     final assetImage =
         AssetImage("images/characters/broly.png", bundle: rootBundle);
     final imageKey = await assetImage.obtainKey(ImageConfiguration());
-    final DecoderCallback decodeResize =
-        (Uint8List bytes, {int cacheWidth, int cacheHeight}) {
+    final DecoderCallback decodeResize = (Uint8List bytes,
+        {bool? allowUpscaling, int? cacheWidth, int? cacheHeight}) {
       return ui.instantiateImageCodec(bytes,
           targetHeight: cacheHeight, targetWidth: cacheWidth);
     };
@@ -88,11 +88,11 @@ class _MainSplitImageState extends State<MainSplitImage> {
 }
 
 class ImagePainter extends CustomPainter {
-  final ui.Image image;
-  final double width;
-  final double height;
-  final double x;
-  final double y;
+  final ui.Image? image;
+  final double? width;
+  final double? height;
+  final double? x;
+  final double? y;
 
   ImagePainter({
     this.image,
@@ -107,19 +107,19 @@ class ImagePainter extends CustomPainter {
     if (image != null) {
       if (width != 0 && height != 0 && x != 0 && y != 0) {
         //crop
-        canvas.clipRect(Rect.fromLTWH(x, y, width, height));
+        canvas.clipRect(Rect.fromLTWH(x!, y!, width!, height!));
       }
       //resize Image
       final ui.Rect rect = ui.Offset.zero & size;
       final Size imageSize =
-          Size(image.width.toDouble(), image.height.toDouble());
+          Size(image!.width.toDouble(), image!.height.toDouble());
       FittedSizes sizes = applyBoxFit(BoxFit.fitWidth, imageSize, size);
       final Rect inputSubrect =
           Alignment.center.inscribe(sizes.source, Offset.zero & imageSize);
       final Rect outputSubrect =
           Alignment.center.inscribe(sizes.destination, rect);
 
-      canvas.drawImageRect(image, inputSubrect, outputSubrect, Paint());
+      canvas.drawImageRect(image!, inputSubrect, outputSubrect, Paint());
     }
   }
 

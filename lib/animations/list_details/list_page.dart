@@ -8,7 +8,7 @@ class ListPage extends StatefulWidget {
 }
 
 class _ListPageState extends State<ListPage> {
-  PageController _controller;
+  PageController? _controller;
 
   _goToDetail(Character character) {
     final page = DetailPage(character: character);
@@ -18,7 +18,7 @@ class _ListPageState extends State<ListPage> {
               Animation<double> secondaryAnimation) {
             return AnimatedBuilder(
                 animation: animation,
-                builder: (BuildContext context, Widget child) {
+                builder: (BuildContext context, Widget? child) {
                   return Opacity(
                     opacity: animation.value,
                     child: page,
@@ -36,14 +36,14 @@ class _ListPageState extends State<ListPage> {
   @override
   void initState() {
     _controller = PageController(viewportFraction: 0.6);
-    _controller.addListener(_pageListener);
+    _controller!.addListener(_pageListener);
     super.initState();
   }
 
   @override
   void dispose() {
-    _controller.removeListener(_pageListener);
-    _controller.dispose();
+    _controller!.removeListener(_pageListener);
+    _controller!.dispose();
     super.dispose();
   }
 
@@ -59,17 +59,17 @@ class _ListPageState extends State<ListPage> {
           controller: _controller,
           itemCount: characters.length,
           itemBuilder: (context, index) {
-            double currentPage = 0;
+            double? currentPage = 0;
             try {
-              currentPage = _controller.page;
+              currentPage = _controller!.page;
             } catch (_) {}
 
-            final resizeFactor =
-                (1 - (((currentPage - index).abs() * 0.3).clamp(0.0, 1.0)));
+            final num resizeFactor =
+                (1 - (((currentPage! - index).abs() * 0.3).clamp(0.0, 1.0)));
             final currentCharacter = characters[index];
             return ListItem(
               character: currentCharacter,
-              resizeFactor: resizeFactor,
+              resizeFactor: resizeFactor as double,
               onTap: () => _goToDetail(currentCharacter),
             );
           }),
@@ -83,10 +83,10 @@ class ListItem extends StatelessWidget {
   final VoidCallback onTap;
 
   const ListItem({
-    Key key,
-    @required this.character,
-    @required this.resizeFactor,
-    @required this.onTap,
+    Key? key,
+    required this.character,
+    required this.resizeFactor,
+    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -120,7 +120,7 @@ class ListItem extends StatelessWidget {
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
                                 colors: [
-                              Color(character.color),
+                              Color(character.color!),
                               Colors.white,
                             ],
                                 stops: [
@@ -134,7 +134,7 @@ class ListItem extends StatelessWidget {
                             bottom: 10,
                           ),
                           child: Text(
-                            character.title,
+                            character.title!,
                             style: TextStyle(
                               fontSize: 24 * resizeFactor,
                               fontWeight: FontWeight.w600,
@@ -150,7 +150,7 @@ class ListItem extends StatelessWidget {
                   child: Hero(
                     tag: "image_${character.title}",
                     child: Image.asset(
-                      character.avatar,
+                      character.avatar!,
                       width: width / 2,
                       height: height,
                     ),

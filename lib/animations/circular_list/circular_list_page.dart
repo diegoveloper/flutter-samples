@@ -8,7 +8,7 @@ class CircularListPage extends StatefulWidget {
 }
 
 class _CircularListPageState extends State<CircularListPage> {
-  wheel.FixedExtentScrollController _controller;
+  late wheel.FixedExtentScrollController _controller;
 
   _listListener() {
     setState(() {});
@@ -42,10 +42,10 @@ class _CircularListPageState extends State<CircularListPage> {
             try {
               currentIndex = _controller.selectedItem;
             } catch (_) {}
-            final resizeFactor =
+            final num resizeFactor =
                 (1 - (((currentIndex - index).abs() * 0.3).clamp(0.0, 1.0)));
             return CircleListItem(
-              resizeFactor: resizeFactor,
+              resizeFactor: resizeFactor as double?,
               character: characters[index],
             );
           },
@@ -62,10 +62,10 @@ class _CircularListPageState extends State<CircularListPage> {
 }
 
 class CircleListItem extends StatelessWidget {
-  final double resizeFactor;
-  final Character character;
+  final double? resizeFactor;
+  final Character? character;
 
-  const CircleListItem({Key key, this.resizeFactor, this.character})
+  const CircleListItem({Key? key, this.resizeFactor, this.character})
       : super(key: key);
 
   @override
@@ -75,16 +75,16 @@ class CircleListItem extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Text(
-            character.title,
+            character!.title!,
             style: TextStyle(
               color: Colors.white,
-              fontSize: 22 * resizeFactor,
+              fontSize: 22 * resizeFactor!,
             ),
           ),
         ),
         Container(
-          width: 120 * resizeFactor,
-          height: 120 * resizeFactor,
+          width: 120 * resizeFactor!,
+          height: 120 * resizeFactor!,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(60),
             color: Colors.white,
@@ -92,15 +92,15 @@ class CircleListItem extends StatelessWidget {
           child: Align(
             child: Container(
               child: Image.asset(
-                character.avatar,
+                character!.avatar!,
                 fit: BoxFit.contain,
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(60),
                 color: Colors.blue,
               ),
-              height: 110 * resizeFactor,
-              width: 110 * resizeFactor,
+              height: 110 * resizeFactor!,
+              width: 110 * resizeFactor!,
             ),
           ),
         ),
